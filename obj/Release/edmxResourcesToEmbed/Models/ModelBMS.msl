@@ -1,0 +1,1741 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BMSModelStoreContainer" CdmEntityContainer="BMSEntities">
+    <EntitySetMapping Name="ADM_AUTH_STATUS">
+      <EntityTypeMapping TypeName="BMSModel.ADM_AUTH_STATUS">
+        <MappingFragment StoreEntitySet="ADM_AUTH_STATUS">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DAILY_KIBOR">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DAILY_KIBOR">
+        <MappingFragment StoreEntitySet="ADM_DAILY_KIBOR">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="RATE_DATE" ColumnName="RATE_DATE" />
+          <ScalarProperty Name="WEEK_1" ColumnName="WEEK_1" />
+          <ScalarProperty Name="WEEK_2" ColumnName="WEEK_2" />
+          <ScalarProperty Name="RATE_1" ColumnName="RATE_1" />
+          <ScalarProperty Name="RATE_3" ColumnName="RATE_3" />
+          <ScalarProperty Name="RATE_6" ColumnName="RATE_6" />
+          <ScalarProperty Name="RATE_9" ColumnName="RATE_9" />
+          <ScalarProperty Name="RATE_12" ColumnName="RATE_12" />
+          <ScalarProperty Name="RATE_24" ColumnName="RATE_24" />
+          <ScalarProperty Name="RATE_36" ColumnName="RATE_36" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_BANK">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_BANK">
+        <MappingFragment StoreEntitySet="ADM_DEF_BANK">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="ABRV" ColumnName="ABRV" />
+          <ScalarProperty Name="ADD" ColumnName="ADD" />
+          <ScalarProperty Name="UAN" ColumnName="UAN" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="TRF_REF_CODE" ColumnName="TRF_REF_CODE" />
+          <ScalarProperty Name="FBL_REF_CODE" ColumnName="FBL_REF_CODE" />
+          <ScalarProperty Name="BAL_REF_CODE" ColumnName="BAL_REF_CODE" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_BANK_AC_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_BANK_AC_TYPE">
+        <MappingFragment StoreEntitySet="ADM_DEF_BANK_AC_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_BANK_BR">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_BANK_BR">
+        <MappingFragment StoreEntitySet="ADM_DEF_BANK_BR">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="BANK_CODE" ColumnName="BANK_CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="MANAGER" ColumnName="MANAGER" />
+          <ScalarProperty Name="TELE" ColumnName="TELE" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_BRANCH">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_BRANCH">
+        <MappingFragment StoreEntitySet="ADM_DEF_BRANCH">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="ABRV" ColumnName="ABRV" />
+          <ScalarProperty Name="CITY_CODE" ColumnName="CITY_CODE" />
+          <ScalarProperty Name="HDBR_CD" ColumnName="HDBR_CD" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MANAGER" ColumnName="MANAGER" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_BUS_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_BUS_TYPE">
+        <MappingFragment StoreEntitySet="ADM_DEF_BUS_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_CHQ_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_CHQ_TYPE">
+        <MappingFragment StoreEntitySet="ADM_DEF_CHQ_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="PAY_MODE" ColumnName="PAY_MODE" />
+          <ScalarProperty Name="CHQ_FROM" ColumnName="CHQ_FROM" />
+          <ScalarProperty Name="CHQ_TO" ColumnName="CHQ_TO" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_CITY">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_CITY">
+        <MappingFragment StoreEntitySet="ADM_DEF_CITY">
+          <ScalarProperty Name="COUNTRY_CODE" ColumnName="COUNTRY_CODE" />
+          <ScalarProperty Name="PROV_CODE" ColumnName="PROV_CODE" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="ABRV" ColumnName="ABRV" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_CLIENT_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_CLIENT_TYPE">
+        <MappingFragment StoreEntitySet="ADM_DEF_CLIENT_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_COUNTRY">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_COUNTRY">
+        <MappingFragment StoreEntitySet="ADM_DEF_COUNTRY">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="RISK_RATING" ColumnName="RISK_RATING" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_DD_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_DD_TYPE">
+        <MappingFragment StoreEntitySet="ADM_DEF_DD_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_DOC_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_DOC_TYPE">
+        <MappingFragment StoreEntitySet="ADM_DEF_DOC_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_EDU">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_EDU">
+        <MappingFragment StoreEntitySet="ADM_DEF_EDU">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_EMAIL_SETTINGS">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_EMAIL_SETTINGS">
+        <MappingFragment StoreEntitySet="ADM_DEF_EMAIL_SETTINGS">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="SENDER" ColumnName="SENDER" />
+          <ScalarProperty Name="RECPT" ColumnName="RECPT" />
+          <ScalarProperty Name="CC" ColumnName="CC" />
+          <ScalarProperty Name="BCC" ColumnName="BCC" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_FINYEAR">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_FINYEAR">
+        <MappingFragment StoreEntitySet="ADM_DEF_FINYEAR">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="FINYEAR" ColumnName="FINYEAR" />
+          <ScalarProperty Name="FINYEAR_FROM" ColumnName="FINYEAR_FROM" />
+          <ScalarProperty Name="FINYEAR_TO" ColumnName="FINYEAR_TO" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="YEAR_END" ColumnName="YEAR_END" />
+          <ScalarProperty Name="YEAR_END_DATE" ColumnName="YEAR_END_DATE" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_FLOAT">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_FLOAT">
+        <MappingFragment StoreEntitySet="ADM_DEF_FLOAT">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="FLOAT_RATE" ColumnName="FLOAT_RATE" />
+          <ScalarProperty Name="FLOAT_DAYS" ColumnName="FLOAT_DAYS" />
+          <ScalarProperty Name="FLOAT_MONTH" ColumnName="FLOAT_MONTH" />
+          <ScalarProperty Name="FLOAT_FIX_DAY" ColumnName="FLOAT_FIX_DAY" />
+          <ScalarProperty Name="FLOAT_FIX_MONTH" ColumnName="FLOAT_FIX_MONTH" />
+          <ScalarProperty Name="KIBOR_MONTH" ColumnName="KIBOR_MONTH" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_FLOAT_FREQ">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_FLOAT_FREQ">
+        <MappingFragment StoreEntitySet="ADM_DEF_FLOAT_FREQ">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="MONTH" ColumnName="MONTH" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_GENDER">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_GENDER">
+        <MappingFragment StoreEntitySet="ADM_DEF_GENDER">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_GROUP">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_GROUP">
+        <MappingFragment StoreEntitySet="ADM_DEF_GROUP">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="REL_DATE" ColumnName="REL_DATE" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_INSU_CO">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_INSU_CO">
+        <MappingFragment StoreEntitySet="ADM_DEF_INSU_CO">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="ADD" ColumnName="ADD" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PERSON_BUS" ColumnName="PERSON_BUS" />
+          <ScalarProperty Name="PERSON_DESIG_BUS" ColumnName="PERSON_DESIG_BUS" />
+          <ScalarProperty Name="PERSON_ADD_BUS" ColumnName="PERSON_ADD_BUS" />
+          <ScalarProperty Name="PERSON_PHONE_BUS" ColumnName="PERSON_PHONE_BUS" />
+          <ScalarProperty Name="PERSON_CLM" ColumnName="PERSON_CLM" />
+          <ScalarProperty Name="PERSON_DESIG_CLM" ColumnName="PERSON_DESIG_CLM" />
+          <ScalarProperty Name="PERSON_ADD_CLM" ColumnName="PERSON_ADD_CLM" />
+          <ScalarProperty Name="PERSON_PHONE_CLM" ColumnName="PERSON_PHONE_CLM" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_MFS" ColumnName="INACTIVE_MFS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_KIBOR_FREQ">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_KIBOR_FREQ">
+        <MappingFragment StoreEntitySet="ADM_DEF_KIBOR_FREQ">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="MONTH" ColumnName="MONTH" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_KIBOR_MONT">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_KIBOR_MONT">
+        <MappingFragment StoreEntitySet="ADM_DEF_KIBOR_MONT">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="MONTH" ColumnName="MONTH" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_LOAN_TERM">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_LOAN_TERM">
+        <MappingFragment StoreEntitySet="ADM_DEF_LOAN_TERM">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_MARITAL">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_MARITAL">
+        <MappingFragment StoreEntitySet="ADM_DEF_MARITAL">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_NATIONAL">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_NATIONAL">
+        <MappingFragment StoreEntitySet="ADM_DEF_NATIONAL">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_OCCUP">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_OCCUP">
+        <MappingFragment StoreEntitySet="ADM_DEF_OCCUP">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_PEP">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_PEP">
+        <MappingFragment StoreEntitySet="ADM_DEF_PEP">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_PROV">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_PROV">
+        <MappingFragment StoreEntitySet="ADM_DEF_PROV">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="COUNTRY_CODE" ColumnName="COUNTRY_CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="ABRV" ColumnName="ABRV" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_REL">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_REL">
+        <MappingFragment StoreEntitySet="ADM_DEF_REL">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_REL_PARTY">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_REL_PARTY">
+        <MappingFragment StoreEntitySet="ADM_DEF_REL_PARTY">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_RES_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_RES_TYPE">
+        <MappingFragment StoreEntitySet="ADM_DEF_RES_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_RM">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_RM">
+        <MappingFragment StoreEntitySet="ADM_DEF_RM">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="DESIG" ColumnName="DESIG" />
+          <ScalarProperty Name="BRANCH_CODE" ColumnName="BRANCH_CODE" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+          <ScalarProperty Name="SIGN" ColumnName="SIGN" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_STOCK_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_STOCK_TYPE">
+        <MappingFragment StoreEntitySet="ADM_DEF_STOCK_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_TAX_RES_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_TAX_RES_TYPE">
+        <MappingFragment StoreEntitySet="ADM_DEF_TAX_RES_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_TAX_STATUS">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_TAX_STATUS">
+        <MappingFragment StoreEntitySet="ADM_DEF_TAX_STATUS">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_DEF_TITLE">
+      <EntityTypeMapping TypeName="BMSModel.ADM_DEF_TITLE">
+        <MappingFragment StoreEntitySet="ADM_DEF_TITLE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_MDL">
+      <EntityTypeMapping TypeName="BMSModel.ADM_MDL">
+        <MappingFragment StoreEntitySet="ADM_MDL">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ACTIVE_DATE" ColumnName="ACTIVE_DATE" />
+          <ScalarProperty Name="ACTIVE_BY" ColumnName="ACTIVE_BY" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_MDL_RIGHT">
+      <EntityTypeMapping TypeName="BMSModel.ADM_MDL_RIGHT">
+        <MappingFragment StoreEntitySet="ADM_MDL_RIGHT">
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="RIGHT_CODE" ColumnName="RIGHT_CODE" />
+          <ScalarProperty Name="RIGHT_DESC_CODE" ColumnName="RIGHT_DESC_CODE" />
+          <ScalarProperty Name="RIGHT_DESC" ColumnName="RIGHT_DESC" />
+          <ScalarProperty Name="TRAN_MODE" ColumnName="TRAN_MODE" />
+          <ScalarProperty Name="TRAN_CODE" ColumnName="TRAN_CODE" />
+          <ScalarProperty Name="RIGHT_URL" ColumnName="RIGHT_URL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_PASS_HISTORY">
+      <EntityTypeMapping TypeName="BMSModel.ADM_PASS_HISTORY">
+        <MappingFragment StoreEntitySet="ADM_PASS_HISTORY">
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="NO" ColumnName="NO" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_SETUP">
+      <EntityTypeMapping TypeName="BMSModel.ADM_SETUP">
+        <MappingFragment StoreEntitySet="ADM_SETUP">
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="FORMERLY" ColumnName="FORMERLY" />
+          <ScalarProperty Name="FORMERLY_NAME" ColumnName="FORMERLY_NAME" />
+          <ScalarProperty Name="ABRIVIATION" ColumnName="ABRIVIATION" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="ADDRESS_REG" ColumnName="ADDRESS_REG" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="UAN" ColumnName="UAN" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="NTN" ColumnName="NTN" />
+          <ScalarProperty Name="LESSOR_CODE" ColumnName="LESSOR_CODE" />
+          <ScalarProperty Name="INCOR_NO" ColumnName="INCOR_NO" />
+          <ScalarProperty Name="INCOR_DATE" ColumnName="INCOR_DATE" />
+          <ScalarProperty Name="SERVER_LOCATION" ColumnName="SERVER_LOCATION" />
+          <ScalarProperty Name="SLAB_DAYS" ColumnName="SLAB_DAYS" />
+          <ScalarProperty Name="FINYEAR" ColumnName="FINYEAR" />
+          <ScalarProperty Name="FINYEAR_FROM" ColumnName="FINYEAR_FROM" />
+          <ScalarProperty Name="FINYEAR_TO" ColumnName="FINYEAR_TO" />
+          <ScalarProperty Name="GL_YEAR" ColumnName="GL_YEAR" />
+          <ScalarProperty Name="CURRENT_YEAR" ColumnName="CURRENT_YEAR" />
+          <ScalarProperty Name="GLYEAR_CODE" ColumnName="GLYEAR_CODE" />
+          <ScalarProperty Name="UN_URL" ColumnName="UN_URL" />
+          <ScalarProperty Name="NACTA_URL" ColumnName="NACTA_URL" />
+          <ScalarProperty Name="ATL_URL" ColumnName="ATL_URL" />
+          <ScalarProperty Name="ATL_PATH" ColumnName="ATL_PATH" />
+          <ScalarProperty Name="SMS_URL" ColumnName="SMS_URL" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_USER_BRANCH">
+      <EntityTypeMapping TypeName="BMSModel.ADM_USER_BRANCH">
+        <MappingFragment StoreEntitySet="ADM_USER_BRANCH">
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="BRANCH_CODE" ColumnName="BRANCH_CODE" />
+          <ScalarProperty Name="BRANCH_NAME" ColumnName="BRANCH_NAME" />
+          <ScalarProperty Name="BRANCH_FLAG" ColumnName="BRANCH_FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_USER_LEVEL">
+      <EntityTypeMapping TypeName="BMSModel.ADM_USER_LEVEL">
+        <MappingFragment StoreEntitySet="ADM_USER_LEVEL">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_USER_LEVEL_RIGHTS">
+      <EntityTypeMapping TypeName="BMSModel.ADM_USER_LEVEL_RIGHTS">
+        <MappingFragment StoreEntitySet="ADM_USER_LEVEL_RIGHTS">
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="LEVEL_CODE" ColumnName="LEVEL_CODE" />
+          <ScalarProperty Name="RIGHT_CODE" ColumnName="RIGHT_CODE" />
+          <ScalarProperty Name="RIGHT_DESC" ColumnName="RIGHT_DESC" />
+          <ScalarProperty Name="TRAN_MODE" ColumnName="TRAN_MODE" />
+          <ScalarProperty Name="TRAN_CODE" ColumnName="TRAN_CODE" />
+          <ScalarProperty Name="RIGHT_FLAG" ColumnName="RIGHT_FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_USER_MDL">
+      <EntityTypeMapping TypeName="BMSModel.ADM_USER_MDL">
+        <MappingFragment StoreEntitySet="ADM_USER_MDL">
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="MID_FLAG" ColumnName="MID_FLAG" />
+          <ScalarProperty Name="LEVEL_CODE" ColumnName="LEVEL_CODE" />
+          <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+          <ScalarProperty Name="LOGIN_ON" ColumnName="LOGIN_ON" />
+          <ScalarProperty Name="LOGOUT_ON" ColumnName="LOGOUT_ON" />
+          <ScalarProperty Name="LAST_LOGIN" ColumnName="LAST_LOGIN" />
+          <ScalarProperty Name="ATTEMPT" ColumnName="ATTEMPT" />
+          <ScalarProperty Name="LOCK" ColumnName="LOCK" />
+          <ScalarProperty Name="LOCK_DATE" ColumnName="LOCK_DATE" />
+          <ScalarProperty Name="DORMANT" ColumnName="DORMANT" />
+          <ScalarProperty Name="DORMANT_DATE" ColumnName="DORMANT_DATE" />
+          <ScalarProperty Name="MIN_RATE" ColumnName="MIN_RATE" />
+          <ScalarProperty Name="MAX_RATE" ColumnName="MAX_RATE" />
+          <ScalarProperty Name="MIN_LIMIT" ColumnName="MIN_LIMIT" />
+          <ScalarProperty Name="MAX_LIMIT" ColumnName="MAX_LIMIT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_USER_RIGHT">
+      <EntityTypeMapping TypeName="BMSModel.ADM_USER_RIGHT">
+        <MappingFragment StoreEntitySet="ADM_USER_RIGHT">
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="LEVEL_CODE" ColumnName="LEVEL_CODE" />
+          <ScalarProperty Name="RIGHT_CODE" ColumnName="RIGHT_CODE" />
+          <ScalarProperty Name="RIGHT_DESC_CODE" ColumnName="RIGHT_DESC_CODE" />
+          <ScalarProperty Name="RIGHT_DESC" ColumnName="RIGHT_DESC" />
+          <ScalarProperty Name="TRAN_MODE" ColumnName="TRAN_MODE" />
+          <ScalarProperty Name="TRAN_CODE" ColumnName="TRAN_CODE" />
+          <ScalarProperty Name="RIGHT_FLAG" ColumnName="RIGHT_FLAG" />
+          <ScalarProperty Name="RIGHT_URL" ColumnName="RIGHT_URL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_USER_RIGHTS">
+      <EntityTypeMapping TypeName="BMSModel.ADM_USER_RIGHTS">
+        <MappingFragment StoreEntitySet="ADM_USER_RIGHTS">
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="LEVEL_CODE" ColumnName="LEVEL_CODE" />
+          <ScalarProperty Name="RIGHT_CODE" ColumnName="RIGHT_CODE" />
+          <ScalarProperty Name="RIGHT_DESC_CODE" ColumnName="RIGHT_DESC_CODE" />
+          <ScalarProperty Name="RIGHT_DESC" ColumnName="RIGHT_DESC" />
+          <ScalarProperty Name="TRAN_MODE" ColumnName="TRAN_MODE" />
+          <ScalarProperty Name="TRAN_CODE" ColumnName="TRAN_CODE" />
+          <ScalarProperty Name="RIGHT_FLAG" ColumnName="RIGHT_FLAG" />
+          <ScalarProperty Name="RIGHT_URL" ColumnName="RIGHT_URL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADM_USERS">
+      <EntityTypeMapping TypeName="BMSModel.ADM_USERS">
+        <MappingFragment StoreEntitySet="ADM_USERS">
+          <ScalarProperty Name="CREATION" ColumnName="CREATION" />
+          <ScalarProperty Name="LAST_MODIFY" ColumnName="LAST_MODIFY" />
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="PASS_EXPIRY_DAYS" ColumnName="PASS_EXPIRY_DAYS" />
+          <ScalarProperty Name="PASS_CHANGE_DATE" ColumnName="PASS_CHANGE_DATE" />
+          <ScalarProperty Name="DORMANT_DAYS" ColumnName="DORMANT_DAYS" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CDD_CLIENT">
+      <EntityTypeMapping TypeName="BMSModel.CDD_CLIENT">
+        <MappingFragment StoreEntitySet="CDD_CLIENT">
+          <ScalarProperty Name="TRAN_DATE" ColumnName="TRAN_DATE" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="EVENT_TYPE" ColumnName="EVENT_TYPE" />
+          <ScalarProperty Name="PARTY_CODE" ColumnName="PARTY_CODE" />
+          <ScalarProperty Name="DD_CODE" ColumnName="DD_CODE" />
+          <ScalarProperty Name="CLIENT_TYPE" ColumnName="CLIENT_TYPE" />
+          <ScalarProperty Name="TAX_RES_TYPE" ColumnName="TAX_RES_TYPE" />
+          <ScalarProperty Name="TAX_STATUS" ColumnName="TAX_STATUS" />
+          <ScalarProperty Name="TAX_EXPIRY" ColumnName="TAX_EXPIRY" />
+          <ScalarProperty Name="TAX_EXEMPT_REASON" ColumnName="TAX_EXEMPT_REASON" />
+          <ScalarProperty Name="DOC_TYPE" ColumnName="DOC_TYPE" />
+          <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+          <ScalarProperty Name="CNIC_EXPIRY" ColumnName="CNIC_EXPIRY" />
+          <ScalarProperty Name="PASS" ColumnName="PASS" />
+          <ScalarProperty Name="PASS_EXPIRY" ColumnName="PASS_EXPIRY" />
+          <ScalarProperty Name="CNIC_OTH" ColumnName="CNIC_OTH" />
+          <ScalarProperty Name="CNIC_OTH_EXPIRY" ColumnName="CNIC_OTH_EXPIRY" />
+          <ScalarProperty Name="NTN" ColumnName="NTN" />
+          <ScalarProperty Name="INCORP_COUNTRY" ColumnName="INCORP_COUNTRY" />
+          <ScalarProperty Name="INCORP_NO" ColumnName="INCORP_NO" />
+          <ScalarProperty Name="INCORP_DATE" ColumnName="INCORP_DATE" />
+          <ScalarProperty Name="IND" ColumnName="IND" />
+          <ScalarProperty Name="CAT" ColumnName="CAT" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ADD" ColumnName="ADD" />
+          <ScalarProperty Name="ADD_PERM" ColumnName="ADD_PERM" />
+          <ScalarProperty Name="ADD_CITY" ColumnName="ADD_CITY" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="GROUP_CODE" ColumnName="GROUP_CODE" />
+          <ScalarProperty Name="CONTACT_PERSON" ColumnName="CONTACT_PERSON" />
+          <ScalarProperty Name="CONTACT_PERSON_DESIG" ColumnName="CONTACT_PERSON_DESIG" />
+          <ScalarProperty Name="RM_CODE" ColumnName="RM_CODE" />
+          <ScalarProperty Name="ZAKAT_EXEMPT" ColumnName="ZAKAT_EXEMPT" />
+          <ScalarProperty Name="ZAKAT_EXEMPT_CERT" ColumnName="ZAKAT_EXEMPT_CERT" />
+          <ScalarProperty Name="ZAKAT_RATE" ColumnName="ZAKAT_RATE" />
+          <ScalarProperty Name="DD_TYPE" ColumnName="DD_TYPE" />
+          <ScalarProperty Name="PEP_STATUS" ColumnName="PEP_STATUS" />
+          <ScalarProperty Name="RISK_LEVEL" ColumnName="RISK_LEVEL" />
+          <ScalarProperty Name="BUSINESS" ColumnName="BUSINESS" />
+          <ScalarProperty Name="KYC_STATUS" ColumnName="KYC_STATUS" />
+          <ScalarProperty Name="FATCA_STATUS" ColumnName="FATCA_STATUS" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CDD_CLIENT_BANK">
+      <EntityTypeMapping TypeName="BMSModel.CDD_CLIENT_BANK">
+        <MappingFragment StoreEntitySet="CDD_CLIENT_BANK">
+          <ScalarProperty Name="PARTY_CODE" ColumnName="PARTY_CODE" />
+          <ScalarProperty Name="DD_CODE" ColumnName="DD_CODE" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="BANK_CODE" ColumnName="BANK_CODE" />
+          <ScalarProperty Name="BANK_BR_CODE" ColumnName="BANK_BR_CODE" />
+          <ScalarProperty Name="AC_TITLE" ColumnName="AC_TITLE" />
+          <ScalarProperty Name="AC_NO" ColumnName="AC_NO" />
+          <ScalarProperty Name="JOINT" ColumnName="JOINT" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="RELATION" ColumnName="RELATION" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CDD_CLIENT_CON">
+      <EntityTypeMapping TypeName="BMSModel.CDD_CLIENT_CON">
+        <MappingFragment StoreEntitySet="CDD_CLIENT_CON">
+          <ScalarProperty Name="PARTY_CODE" ColumnName="PARTY_CODE" />
+          <ScalarProperty Name="RES_STATUS" ColumnName="RES_STATUS" />
+          <ScalarProperty Name="FATHER" ColumnName="FATHER" />
+          <ScalarProperty Name="MOTHER" ColumnName="MOTHER" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="MARITAL" ColumnName="MARITAL" />
+          <ScalarProperty Name="SPOUSE" ColumnName="SPOUSE" />
+          <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="BIRTH_PLACE" ColumnName="BIRTH_PLACE" />
+          <ScalarProperty Name="EDUCAT" ColumnName="EDUCAT" />
+          <ScalarProperty Name="DD_CODE" ColumnName="DD_CODE" />
+          <ScalarProperty Name="RES_TYPE" ColumnName="RES_TYPE" />
+          <ScalarProperty Name="OCCUP" ColumnName="OCCUP" />
+          <ScalarProperty Name="GUAR_NAME" ColumnName="GUAR_NAME" />
+          <ScalarProperty Name="GUAR_REL" ColumnName="GUAR_REL" />
+          <ScalarProperty Name="NATIONAL" ColumnName="NATIONAL" />
+          <ScalarProperty Name="DEPEND" ColumnName="DEPEND" />
+          <ScalarProperty Name="BIRTH_CITY" ColumnName="BIRTH_CITY" />
+          <ScalarProperty Name="BIRTH_COUNTRY" ColumnName="BIRTH_COUNTRY" />
+          <ScalarProperty Name="COS" ColumnName="COS" />
+          <ScalarProperty Name="COS_ADD" ColumnName="COS_ADD" />
+          <ScalarProperty Name="REL_PARTY" ColumnName="REL_PARTY" />
+          <ScalarProperty Name="REL_PARTY_CODE" ColumnName="REL_PARTY_CODE" />
+          <ScalarProperty Name="REL_PARTY_NAME" ColumnName="REL_PARTY_NAME" />
+          <ScalarProperty Name="REL_PARTY_REL" ColumnName="REL_PARTY_REL" />
+          <ScalarProperty Name="NTK_NAME" ColumnName="NTK_NAME" />
+          <ScalarProperty Name="NTK_REL" ColumnName="NTK_REL" />
+          <ScalarProperty Name="NTK_ADD" ColumnName="NTK_ADD" />
+          <ScalarProperty Name="NTK_PHONE" ColumnName="NTK_PHONE" />
+          <ScalarProperty Name="NTK_CNIC" ColumnName="NTK_CNIC" />
+          <ScalarProperty Name="NTK_CNIC_EXPIRY" ColumnName="NTK_CNIC_EXPIRY" />
+          <ScalarProperty Name="BEN" ColumnName="BEN" />
+          <ScalarProperty Name="BEN_PARTY_CODE" ColumnName="BEN_PARTY_CODE" />
+          <ScalarProperty Name="BEN_NAME" ColumnName="BEN_NAME" />
+          <ScalarProperty Name="BEN_ADDRESS" ColumnName="BEN_ADDRESS" />
+          <ScalarProperty Name="BEN_CNIC" ColumnName="BEN_CNIC" />
+          <ScalarProperty Name="BEN_OCCUP" ColumnName="BEN_OCCUP" />
+          <ScalarProperty Name="BEN_REL" ColumnName="BEN_REL" />
+          <ScalarProperty Name="BUSS_NAME" ColumnName="BUSS_NAME" />
+          <ScalarProperty Name="BUSS_TYPE" ColumnName="BUSS_TYPE" />
+          <ScalarProperty Name="BUSS_ADD" ColumnName="BUSS_ADD" />
+          <ScalarProperty Name="BUSS_PHONE" ColumnName="BUSS_PHONE" />
+          <ScalarProperty Name="BUSS_NOY" ColumnName="BUSS_NOY" />
+          <ScalarProperty Name="BUSS_NOE" ColumnName="BUSS_NOE" />
+          <ScalarProperty Name="BUSS_NTN" ColumnName="BUSS_NTN" />
+          <ScalarProperty Name="BUSS_APPROX_INCOME" ColumnName="BUSS_APPROX_INCOME" />
+          <ScalarProperty Name="EMPL_NAME" ColumnName="EMPL_NAME" />
+          <ScalarProperty Name="EMPL_TYPE" ColumnName="EMPL_TYPE" />
+          <ScalarProperty Name="EMPL_ADD" ColumnName="EMPL_ADD" />
+          <ScalarProperty Name="EMPL_PHONE" ColumnName="EMPL_PHONE" />
+          <ScalarProperty Name="EMPL_DESIG" ColumnName="EMPL_DESIG" />
+          <ScalarProperty Name="EMPL_DOJ" ColumnName="EMPL_DOJ" />
+          <ScalarProperty Name="EMPL_SERVICE_PERIOD" ColumnName="EMPL_SERVICE_PERIOD" />
+          <ScalarProperty Name="EMPL_STATUS" ColumnName="EMPL_STATUS" />
+          <ScalarProperty Name="EMPL_APPROX_SAL" ColumnName="EMPL_APPROX_SAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CDD_CLIENT_DIR">
+      <EntityTypeMapping TypeName="BMSModel.CDD_CLIENT_DIR">
+        <MappingFragment StoreEntitySet="CDD_CLIENT_DIR">
+          <ScalarProperty Name="PARTY_CODE" ColumnName="PARTY_CODE" />
+          <ScalarProperty Name="DD_CODE" ColumnName="DD_CODE" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ADD" ColumnName="ADD" />
+          <ScalarProperty Name="ADD_PERM" ColumnName="ADD_PERM" />
+          <ScalarProperty Name="FATHER" ColumnName="FATHER" />
+          <ScalarProperty Name="MOTHER" ColumnName="MOTHER" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="MARITAL" ColumnName="MARITAL" />
+          <ScalarProperty Name="SPOUSE" ColumnName="SPOUSE" />
+          <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+          <ScalarProperty Name="CNIC_EXPIRY" ColumnName="CNIC_EXPIRY" />
+          <ScalarProperty Name="PASST_NO" ColumnName="PASST_NO" />
+          <ScalarProperty Name="PASS_EXPIRY" ColumnName="PASS_EXPIRY" />
+          <ScalarProperty Name="SHARES" ColumnName="SHARES" />
+          <ScalarProperty Name="DOJ" ColumnName="DOJ" />
+          <ScalarProperty Name="DOL" ColumnName="DOL" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="TNOM" ColumnName="TNOM" />
+          <ScalarProperty Name="NNOM" ColumnName="NNOM" />
+          <ScalarProperty Name="PROFESSION" ColumnName="PROFESSION" />
+          <ScalarProperty Name="BIRTH_COUNTRY" ColumnName="BIRTH_COUNTRY" />
+          <ScalarProperty Name="BIRTH_CITY" ColumnName="BIRTH_CITY" />
+          <ScalarProperty Name="BIRTH_PLACE" ColumnName="BIRTH_PLACE" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="COS" ColumnName="COS" />
+          <ScalarProperty Name="COS_ADDS" ColumnName="COS_ADDS" />
+          <ScalarProperty Name="PEP_STATUS" ColumnName="PEP_STATUS" />
+          <ScalarProperty Name="REL_OTHR_ORG" ColumnName="REL_OTHR_ORG" />
+          <ScalarProperty Name="AUTH_SIGN" ColumnName="AUTH_SIGN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CDD_CLIENT_GUA">
+      <EntityTypeMapping TypeName="BMSModel.CDD_CLIENT_GUA">
+        <MappingFragment StoreEntitySet="CDD_CLIENT_GUA">
+          <ScalarProperty Name="PARTY_CODE" ColumnName="PARTY_CODE" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ADD" ColumnName="ADD" />
+          <ScalarProperty Name="ADD_PREM" ColumnName="ADD_PREM" />
+          <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+          <ScalarProperty Name="CNIC_EXPIRY" ColumnName="CNIC_EXPIRY" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="FATHER" ColumnName="FATHER" />
+          <ScalarProperty Name="MOTHER" ColumnName="MOTHER" />
+          <ScalarProperty Name="SPOUSE" ColumnName="SPOUSE" />
+          <ScalarProperty Name="COS" ColumnName="COS" />
+          <ScalarProperty Name="COS_ADD" ColumnName="COS_ADD" />
+          <ScalarProperty Name="CITY_BIRTH" ColumnName="CITY_BIRTH" />
+          <ScalarProperty Name="COUNTRY_BIRTH" ColumnName="COUNTRY_BIRTH" />
+          <ScalarProperty Name="COUNTRY_NATIONAL" ColumnName="COUNTRY_NATIONAL" />
+          <ScalarProperty Name="LIAB_G" ColumnName="LIAB_G" />
+          <ScalarProperty Name="LIAB_B" ColumnName="LIAB_B" />
+          <ScalarProperty Name="AUTH_SIGN" ColumnName="AUTH_SIGN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CDD_CLIENT_NATIONAL">
+      <EntityTypeMapping TypeName="BMSModel.CDD_CLIENT_NATIONAL">
+        <MappingFragment StoreEntitySet="CDD_CLIENT_NATIONAL">
+          <ScalarProperty Name="PARTY_CODE" ColumnName="PARTY_CODE" />
+          <ScalarProperty Name="DD_CODE" ColumnName="DD_CODE" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="COUNTRY_CODE" ColumnName="COUNTRY_CODE" />
+          <ScalarProperty Name="ORIGIN" ColumnName="ORIGIN" />
+          <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+          <ScalarProperty Name="CNIC_EXPIRY" ColumnName="CNIC_EXPIRY" />
+          <ScalarProperty Name="NTN" ColumnName="NTN" />
+          <ScalarProperty Name="TAX_STATUS" ColumnName="TAX_STATUS" />
+          <ScalarProperty Name="TAX_FILE_DATE" ColumnName="TAX_FILE_DATE" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_CLIENT_LIMIT">
+      <EntityTypeMapping TypeName="BMSModel.LMS_CLIENT_LIMIT">
+        <MappingFragment StoreEntitySet="LMS_CLIENT_LIMIT">
+          <ScalarProperty Name="TRAN_CODE" ColumnName="TRAN_CODE" />
+          <ScalarProperty Name="TRAN_DATE" ColumnName="TRAN_DATE" />
+          <ScalarProperty Name="PARTY_CODE" ColumnName="PARTY_CODE" />
+          <ScalarProperty Name="LEASE_CAT" ColumnName="LEASE_CAT" />
+          <ScalarProperty Name="LIMIT_TYPE" ColumnName="LIMIT_TYPE" />
+          <ScalarProperty Name="EFFECT_DATE" ColumnName="EFFECT_DATE" />
+          <ScalarProperty Name="LIMIT" ColumnName="LIMIT" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_AMORT_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_AMORT_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_AMORT_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_ASET_CAT">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_ASET_CAT">
+        <MappingFragment StoreEntitySet="LMS_DEF_ASET_CAT">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_ASET_MAKE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_ASET_MAKE">
+        <MappingFragment StoreEntitySet="LMS_DEF_ASET_MAKE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_ASET_MANUFACT">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_ASET_MANUFACT">
+        <MappingFragment StoreEntitySet="LMS_DEF_ASET_MANUFACT">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="ADD" ColumnName="ADD" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_ASET_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_ASET_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_ASET_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_BCA_APPLI_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_BCA_APPLI_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_BCA_APPLI_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_BCA_FACI_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_BCA_FACI_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_BCA_FACI_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_BCA_RENEWAL">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_BCA_RENEWAL">
+        <MappingFragment StoreEntitySet="LMS_DEF_BCA_RENEWAL">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_BCA_TYPES">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_BCA_TYPES">
+        <MappingFragment StoreEntitySet="LMS_DEF_BCA_TYPES">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_BRWR_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_BRWR_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_BRWR_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_BUS_CAT">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_BUS_CAT">
+        <MappingFragment StoreEntitySet="LMS_DEF_BUS_CAT">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_BUS_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_BUS_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_BUS_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_CAT">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_CAT">
+        <MappingFragment StoreEntitySet="LMS_DEF_CAT">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_CIB_BRWR_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_CIB_BRWR_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_CIB_BRWR_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_CIB_BUS_CAT">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_CIB_BUS_CAT">
+        <MappingFragment StoreEntitySet="LMS_DEF_CIB_BUS_CAT">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_CIB_BUS_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_CIB_BUS_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_CIB_BUS_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_CIB_IND">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_CIB_IND">
+        <MappingFragment StoreEntitySet="LMS_DEF_CIB_IND">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_CIB_PROD">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_CIB_PROD">
+        <MappingFragment StoreEntitySet="LMS_DEF_CIB_PROD">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_CIB_PROV">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_CIB_PROV">
+        <MappingFragment StoreEntitySet="LMS_DEF_CIB_PROV">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="COUNTRY_CODE" ColumnName="COUNTRY_CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="ABRV" ColumnName="ABRV" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_CIB_SECT">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_CIB_SECT">
+        <MappingFragment StoreEntitySet="LMS_DEF_CIB_SECT">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_CIB_STATUS">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_CIB_STATUS">
+        <MappingFragment StoreEntitySet="LMS_DEF_CIB_STATUS">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_CIB_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_CIB_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_CIB_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_COLAT_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_COLAT_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_COLAT_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="COLAT_DESC" ColumnName="COLAT_DESC" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_CORP_STAT">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_CORP_STAT">
+        <MappingFragment StoreEntitySet="LMS_DEF_CORP_STAT">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="COR_TYPE" ColumnName="COR_TYPE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_CORP_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_CORP_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_CORP_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_EDU">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_EDU">
+        <MappingFragment StoreEntitySet="LMS_DEF_EDU">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_EMPL_STATUS">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_EMPL_STATUS">
+        <MappingFragment StoreEntitySet="LMS_DEF_EMPL_STATUS">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_lMS" ColumnName="INACTIVE_lMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_EMPL_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_EMPL_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_EMPL_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_FACILITY_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_FACILITY_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_FACILITY_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_GROUP">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_GROUP">
+        <MappingFragment StoreEntitySet="LMS_DEF_GROUP">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_IND">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_IND">
+        <MappingFragment StoreEntitySet="LMS_DEF_IND">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_IND_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_IND_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_IND_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_ISIC">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_ISIC">
+        <MappingFragment StoreEntitySet="LMS_DEF_ISIC">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="ISIC_CODE" ColumnName="ISIC_CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_LEASE_NAT">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_LEASE_NAT">
+        <MappingFragment StoreEntitySet="LMS_DEF_LEASE_NAT">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_LEASE_NAT_SUB">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_LEASE_NAT_SUB">
+        <MappingFragment StoreEntitySet="LMS_DEF_LEASE_NAT_SUB">
+          <ScalarProperty Name="LEASE_NAT" ColumnName="LEASE_NAT" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_LEASE_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_LEASE_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_LEASE_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_LEASE_TYPE_SUB">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_LEASE_TYPE_SUB">
+        <MappingFragment StoreEntitySet="LMS_DEF_LEASE_TYPE_SUB">
+          <ScalarProperty Name="LEASE_TYPE" ColumnName="LEASE_TYPE" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_LEND_INST">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_LEND_INST">
+        <MappingFragment StoreEntitySet="LMS_DEF_LEND_INST">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_LESSEE_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_LESSEE_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_LESSEE_TYPE">
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_LITI_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_LITI_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_LITI_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_NFBI_SECT">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_NFBI_SECT">
+        <MappingFragment StoreEntitySet="LMS_DEF_NFBI_SECT">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_NICODE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_NICODE">
+        <MappingFragment StoreEntitySet="LMS_DEF_NICODE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="NICODE" ColumnName="NICODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_NP_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_NP_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_NP_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_PAY_MODE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_PAY_MODE">
+        <MappingFragment StoreEntitySet="LMS_DEF_PAY_MODE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_PERIOD">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_PERIOD">
+        <MappingFragment StoreEntitySet="LMS_DEF_PERIOD">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_PROV">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_PROV">
+        <MappingFragment StoreEntitySet="LMS_DEF_PROV">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_RENT_MODE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_RENT_MODE">
+        <MappingFragment StoreEntitySet="LMS_DEF_RENT_MODE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_RES_TYPE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_RES_TYPE">
+        <MappingFragment StoreEntitySet="LMS_DEF_RES_TYPE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE_LMS" ColumnName="INACTIVE_LMS" />
+          <ScalarProperty Name="INACTIVE_IMS" ColumnName="INACTIVE_IMS" />
+          <ScalarProperty Name="INACTIVE_MFL" ColumnName="INACTIVE_MFL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_SECTOR">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_SECTOR">
+        <MappingFragment StoreEntitySet="LMS_DEF_SECTOR">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_SUP">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_SUP">
+        <MappingFragment StoreEntitySet="LMS_DEF_SUP">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ADD" ColumnName="ADD" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_TITLE">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_TITLE">
+        <MappingFragment StoreEntitySet="LMS_DEF_TITLE">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LMS_DEF_VALUATOR">
+      <EntityTypeMapping TypeName="BMSModel.LMS_DEF_VALUATOR">
+        <MappingFragment StoreEntitySet="LMS_DEF_VALUATOR">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ADD" ColumnName="ADD" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="AUTH_STATUS" ColumnName="AUTH_STATUS" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_REMARKS" ColumnName="AUTH_REMARKS" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,372 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <style>
+         /*----- Tabs -----*/
+        .tabs {
+            width: 100%;
+            display: inline-block;
+        }
+
+        /*----- Tab Links -----*/
+        /* Clearfix */
+        .tab-links:after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+
+        .tab-links li {
+            margin: 0px 5px;
+            float: left;
+            list-style: none;
+        }
+
+        .tab-links a {
+            padding: 9px 15px;
+            display: inline-block;
+            border-radius: 3px 3px 0px 0px;
+            background: #7FB5DA;
+            font-size: 16px;
+            font-weight: 600;
+            color: #4c4c4c;
+            transition: all linear 0.15s;
+        }
+
+            .tab-links a:hover {
+                background: #a7cce5;
+                text-decoration: none;
+            }
+
+        li.active a, li.active a:hover {
+            background: #fff;
+            color: #4c4c4c;
+        }
+
+        /*----- Content of Tabs -----*/
+        .tab-content {
+            padding: 15px;
+            border-radius: 3px;
+            box-shadow: -1px 1px 1px rgba(0,0,0,0.15);
+            background: #fff;
+        }
+
+        .tab {
+            display: none;
+        }
+
+            .tab.active {
+                display: block;
+            }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+
+        th, td {
+            width: 150px;
+            padding: 5px;
+        }
+    </style>
+
+
+    <div class="form-horizontal">
+        <h1>Legal Document Information</h1>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <form action="/action_page.php">
+            <fieldset>
+                <legend>Personal information:</legend>
+                Aggrement Number:
+                <input type="text" name="Aggrement No" value="" size="17">
+                <input type="submit" value="Search">
+                Aggrement Date:
+                <input type="date" name="Aggrement Date" value="">
+            </fieldset>
+            <hr />
+        </form>
+        <div class="tabs">
+            <ul class="tab-links">
+                <li class="active"><a href="#tab1">General Information</a></li>
+                <li><a href="#tab2">Assest Detail</a></li>
+                <li><a href="#tab3">InsuranceALVs</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="tab1" class="tab active">
+                    <form action="/action_page">
+                        <fieldset>
+                            <legend>General Information:</legend>
+                            Transaction Number:
+                            <input type="text" name="Transaction No" value="" size="17" id="num"><input type="submit" value="Search">
+                            <br />
+                            <br />
+                            <table border="0">
+                                <tr>
+                                    <td>Party Code:</td>
+                                    <td><input type="text" name="Party Code" value="" size="17"></td>
+                                    <td>Application Number:</td>
+                                    <td><input type="text" name="Application No" value="" size="17"></td>
+                                    <td>Disburse Date:</td>
+                                    <td><input type="date" name="Disburse Date" value=""></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Maturity Date:</td>
+                                    <td><input type="date" name="Maturity Date" value=""></td>
+                                    <td>PS ID:</td>
+                                    <td><input type="text" name="PS ID" value="" size="17"></td>
+                                    <td>Area:</td>
+                                    <td><input type="text" name="Area" value="" size="17"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Client Name:</td>
+                                    <td>
+                                        <select name="Title">
+                                            <option value="1">Mr.  </option>
+                                            <option value="2">Mrs.  </option>
+                                        </select><input type="text" name="Client Name" value="" size="17">
+                                    </td>
+                                    <td>Father Name:</td>
+                                    <td><input type="text" name="Father Name" value="" size="17"></td>
+                                    <td>Designation Name:</td>
+                                    <td><input type="text" name="Designation Name" value="" size="17"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Address:</td>
+                                    <td><input type="text" name="Address" value="" size="17"></td>
+                                    <td>Phone Number:</td>
+                                    <td><input type="text" name="Phone No" value="" size="17"></td>
+                                    <td>CNIC Number:</td>
+                                    <td><input type="text" name="CNIC" value="" size="17"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Email Address:</td>
+                                    <td><input type="text" name="Email" value="" size="17"></td>
+                                    <td>PS ID:</td>
+                                    <td><input type="text" name="PS ID" value="" size="17"></td>
+                                    <td>Area:</td>
+                                    <td><input type="text" name="Area" value="" size="17"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Category:</td>
+                                    <td><input type="text" name="Category" value="" size="17"></td>
+                                    <td>Period:</td>
+                                    <td><input type="text" name="Period" value="" size="17"></td>
+                                    <td>Least Cost:</td>
+                                    <td><input type="text" name="LeastCost" value="" size="17"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>PG Amount:</td>
+                                    <td><input type="text" name="PGAmount" value="" size="17"></td>
+                                    <td>RV %:</td>
+                                    <td><input type="text" name="RVper" value="" size="7"><input type="text" name="RVper" value="" size="7"></td>
+                                    <td>DM %:</td>
+                                    <td><input type="text" name="DMper" value="" size="7"><input type="text" name="DMper" value="" size="7"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Markup Rate:</td>
+                                    <td><input type="text" name="Markup Rate" value="" size="17"></td>
+                                    <td>Payment Mode:</td>
+                                    <td><input type="text" name="Payment Mode" value="" size="17"></td>
+                                    <td>Rental Mode:</td>
+                                    <td><input type="text" name="Rental Mode" value="" size="17"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Spread Rate:</td>
+                                    <td><input type="text" name="Spread Rate" value="" size="17"></td>
+                                    <td>KIBOR Months:</td>
+                                    <td><input type="text" name="KIBOR" value="" size="17"></td>
+                                    <td>Insurance %:</td>
+                                    <td><input type="text" name="Insurance" value="" size="17"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Lease Rent:</td>
+                                    <td><input type="text" name="Lease Rent" value="" size="17"></td>
+                                    <td>Floor Rate:</td>
+                                    <td><input type="text" name="Floor" value="" size="17"></td>
+                                    <td>Cap Rate:</td>
+                                    <td><input type="text" name="Cap" value="" size="17"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Benchmark:</td>
+                                    <td><input type="checkbox" name="Benchmark" value=""></td>
+                                    <td>Supplier Name:</td>
+                                    <td><input type="text" name="Supplier" value="" size="17"></td>
+                                    <td>Address:</td>
+                                    <td><input type="text" name="Address" value="" size="17"></td>
+                                </tr>
+
+                            </table>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>From</th>
+                                        <th>To</th>
+                                        <th>Rental</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <button type="button" class="btn btn-success">Save</button>
+                            <button type="button" class="btn btn-primary">Edit</button>
+                            <button type="button" class="btn btn-secondary">Delete</button>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div id="tab2" class="tab">
+                    <form action="/action_page.php">
+                        <fieldset>
+                            <legend>Assest Detail:</legend>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>SR #</th>
+                                        <th>Description</th>
+                                        <th>Quantity</th>
+                                        <th>Rate</th>
+                                        <th>Cost</th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Total Asset Cost:</td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                            </table>
+
+                            <table border="0">
+                                <tr>
+                                    <td>SR Number:</td>
+                                    <td><input type="text" name="SR" value="" size="17"></td>
+                                    <td>Asset Name:</td>
+                                    <td><input type="text" name="Asset Name" value="" size="17"></td>
+                                    <td>Rate:</td>
+                                    <td><input type="text" name="Rate" value="" size="17"></td>
+                                </tr>
+                                <tr>
+                                    <td>Quantity:</td>
+                                    <td><input type="text" name="Quantity" value="" size="17"></td>
+                                    <td>Asset Cost:</td>
+                                    <td><input type="text" name="Asset Cost" value="" size="17"></td>
+                                    <td>Asset Type:</td>
+                                    <td>
+                                        <select name="Title">
+                                            <option value="1">Asset 1</option>
+                                            <option value="2">Asset 2</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table border="0" >
+                                <tr>
+                                    <td>Registration Number:</td>
+                                    <td><input type="text" name="RegistrationNo" value="" size="17"></td>
+                                    <td>Model Number:</td>
+                                    <td><input type="text" name="ModelNo" value="" size="17"></td>
+                                    <td>Engine Number:</td>
+                                    <td><input type="text" name="EngineNo" value="" size="17"></td>
+                                </tr>
+                                <tr>
+                                    <td>Chasis Number:</td>
+                                    <td><input type="text" name="ChasisNo" value="" size="17"></td>
+                                    <td>Color:</td>
+                                    <td><input type="text" name="Color" value="" size="17"></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <button type="button" class="btn btn-success">Save</button>
+                            <button type="button" class="btn btn-primary">Edit</button>
+                            <button type="button" class="btn btn-secondary">Delete</button>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div id="tab3" class="tab">
+                    <form action="/action_page.php">
+                        <fieldset>
+                            <legend>Insured Value:</legend>
+                            <table border="0" >
+                                <tr>
+                                    <td>1st Year:</td>
+                                    <td><input type="text" name="1st" value="" size="17"></td>
+                                    <td>2nd Year:</td>
+                                    <td><input type="text" name="2nd" value="" size="17"></td>
+                                    <td>3rd Year:</td>
+                                    <td><input type="text" name="3rd" value="" size="17"></td>
+                                </tr>
+                                <tr>
+                                    <td>4th Year:</td>
+                                    <td><input type="text" name="4th" value="" size="17"></td>
+                                    <td>5th Year:</td>
+                                    <td><input type="text" name="5th" value="" size="17"></td>
+                                    <td>6th Year:</td>
+                                    <td><input type="text" name="6th" value="" size="17"></td>
+                                </tr>
+                            </table>
+                            <legend>Agreed Loss Values ALVS:</legend>
+                            <table border="0" >
+                                <tr>
+                                    <td>1st Year:</td>
+                                    <td><input type="text" name="1st" value="" size="17"></td>
+                                    <td>2nd Year:</td>
+                                    <td><input type="text" name="2nd" value="" size="17"></td>
+                                    <td>3rd Year:</td>
+                                    <td><input type="text" name="3rd" value="" size="17"></td>
+                                </tr>
+                                <tr>
+                                    <td>4th Year:</td>
+                                    <td><input type="text" name="4th" value="" size="17"></td>
+                                    <td>5th Year:</td>
+                                    <td><input type="text" name="5th" value="" size="17"></td>
+                                    <td>6th Year:</td>
+                                    <td><input type="text" name="6th" value="" size="17"></td>
+                                </tr>
+                            </table>
+                            <button type="button" class="btn btn-success">Save</button>
+                            <button type="button" class="btn btn-primary">Edit</button>
+                            <button type="button" class="btn btn-secondary">Delete</button>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1595d54516ce44c3a65769696b581677" Name="Diagram1">
+        <EntityTypeShape EntityType="BMSModel.ADM_AUTH_STATUS" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DAILY_KIBOR" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_BANK" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_BANK_AC_TYPE" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_BANK_BR" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_BRANCH" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_BUS_TYPE" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_CHQ_TYPE" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_CITY" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_CLIENT_TYPE" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_COUNTRY" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_DD_TYPE" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_DOC_TYPE" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_EDU" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_EMAIL_SETTINGS" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_FINYEAR" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_FLOAT" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_FLOAT_FREQ" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_GENDER" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_GROUP" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_INSU_CO" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_KIBOR_FREQ" Width="1.5" PointX="4.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_KIBOR_MONT" Width="1.5" PointX="6.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_LOAN_TERM" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_MARITAL" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_NATIONAL" Width="1.5" PointX="14.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_OCCUP" Width="1.5" PointX="8.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_PEP" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_PROV" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_REL" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_REL_PARTY" Width="1.5" PointX="16.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_RES_TYPE" Width="1.5" PointX="16.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_RM" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_STOCK_TYPE" Width="1.5" PointX="2.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_TAX_RES_TYPE" Width="1.5" PointX="4.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_TAX_STATUS" Width="1.5" PointX="14.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_DEF_TITLE" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_MDL" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_MDL_RIGHT" Width="1.5" PointX="18.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_PASS_HISTORY" Width="1.5" PointX="6.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_SETUP" Width="1.5" PointX="18.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_USER_BRANCH" Width="1.5" PointX="8.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_USER_LEVEL" Width="1.5" PointX="10.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_USER_LEVEL_RIGHTS" Width="1.5" PointX="18.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_USER_MDL" Width="1.5" PointX="18.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_USER_RIGHT" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_USER_RIGHTS" Width="1.5" PointX="20.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.ADM_USERS" Width="1.5" PointX="20.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.CDD_CLIENT" Width="1.5" PointX="20.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.CDD_CLIENT_BANK" Width="1.5" PointX="0.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.CDD_CLIENT_CON" Width="1.5" PointX="2.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.CDD_CLIENT_DIR" Width="1.5" PointX="4.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.CDD_CLIENT_GUA" Width="1.5" PointX="6.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.CDD_CLIENT_NATIONAL" Width="1.5" PointX="12.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_CLIENT_LIMIT" Width="1.5" PointX="14.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_AMORT_TYPE" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_ASET_CAT" Width="1.5" PointX="22.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_ASET_MAKE" Width="1.5" PointX="22.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_ASET_MANUFACT" Width="1.5" PointX="8.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_ASET_TYPE" Width="1.5" PointX="22.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_BCA_APPLI_TYPE" Width="1.5" PointX="22.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_BCA_FACI_TYPE" Width="1.5" PointX="22.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_BCA_RENEWAL" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_BCA_TYPES" Width="1.5" PointX="24.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_BRWR_TYPE" Width="1.5" PointX="24.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_BUS_CAT" Width="1.5" PointX="24.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_BUS_TYPE" Width="1.5" PointX="24.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_CAT" Width="1.5" PointX="24.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_CIB_BRWR_TYPE" Width="1.5" PointX="22.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_CIB_BUS_CAT" Width="1.5" PointX="24.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_CIB_BUS_TYPE" Width="1.5" PointX="10.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_CIB_IND" Width="1.5" PointX="16.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_CIB_PROD" Width="1.5" PointX="18.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_CIB_PROV" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_CIB_SECT" Width="1.5" PointX="26.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_CIB_STATUS" Width="1.5" PointX="26.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_CIB_TYPE" Width="1.5" PointX="26.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_COLAT_TYPE" Width="1.5" PointX="12.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_CORP_STAT" Width="1.5" PointX="26.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_CORP_TYPE" Width="1.5" PointX="26.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_EDU" Width="1.5" PointX="26.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_EMPL_STATUS" Width="1.5" PointX="6.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_EMPL_TYPE" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_FACILITY_TYPE" Width="1.5" PointX="28.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_GROUP" Width="1.5" PointX="28.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_IND" Width="1.5" PointX="28.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_IND_TYPE" Width="1.5" PointX="28.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_ISIC" Width="1.5" PointX="28.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_LEASE_NAT" Width="1.5" PointX="20.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_LEASE_NAT_SUB" Width="1.5" PointX="22.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_LEASE_TYPE" Width="1.5" PointX="28.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_LEASE_TYPE_SUB" Width="1.5" PointX="24.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_LEND_INST" Width="1.5" PointX="26.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_LESSEE_TYPE" Width="1.5" PointX="28.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_LITI_TYPE" Width="1.5" PointX="8.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_NFBI_SECT" Width="1.5" PointX="14.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_NICODE" Width="1.5" PointX="16.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_NP_TYPE" Width="1.5" PointX="30.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_PAY_MODE" Width="1.5" PointX="30.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_PERIOD" Width="1.5" PointX="30.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_PROV" Width="1.5" PointX="10.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_RENT_MODE" Width="1.5" PointX="30.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_RES_TYPE" Width="1.5" PointX="30.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_SECTOR" Width="1.5" PointX="30.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_SUP" Width="1.5" PointX="30.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_TITLE" Width="1.5" PointX="30.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BMSModel.LMS_DEF_VALUATOR" Width="1.5" PointX="4.75" PointY="31.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

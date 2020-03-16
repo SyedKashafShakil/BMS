@@ -1,0 +1,1761 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ADM_AUTH_STATUS">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DAILY_KIBOR">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="RATE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="WEEK_1" Type="Decimal" Precision="12" Scale="5" />
+    <Property Name="WEEK_2" Type="Decimal" Precision="12" Scale="5" />
+    <Property Name="RATE_1" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="RATE_3" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="RATE_6" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="RATE_9" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="RATE_12" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="RATE_24" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="RATE_36" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_BANK">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ABRV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TRF_REF_CODE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FBL_REF_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="BAL_REF_CODE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_BANK_AC_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_BANK_BR">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="BANK_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FAX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MANAGER" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="TELE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_BRANCH">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ABRV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CITY_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="HDBR_CD" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="ADDRESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="MANAGER" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_BUS_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_CHQ_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PAY_MODE" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="CHQ_FROM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CHQ_TO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_CITY">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="COUNTRY_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="PROV_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ABRV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_CLIENT_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_COUNTRY">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RISK_RATING" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_DD_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_DOC_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_EDU">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_EMAIL_SETTINGS">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SENDER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RECPT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_FINYEAR">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FINYEAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FINYEAR_FROM" Type="DateTime" Precision="0" />
+    <Property Name="FINYEAR_TO" Type="DateTime" Precision="0" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="YEAR_END" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="YEAR_END_DATE" Type="DateTime" Precision="0" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_FLOAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FLOAT_RATE" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="FLOAT_DAYS" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="FLOAT_MONTH" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="FLOAT_FIX_DAY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="FLOAT_FIX_MONTH" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="KIBOR_MONTH" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_FLOAT_FREQ">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MONTH" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_GENDER">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_GROUP">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="REL_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_INSU_CO">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PERSON_BUS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PERSON_DESIG_BUS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PERSON_ADD_BUS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PERSON_PHONE_BUS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PERSON_CLM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PERSON_DESIG_CLM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PERSON_ADD_CLM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PERSON_PHONE_CLM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFS" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_KIBOR_FREQ">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MONTH" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_KIBOR_MONT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MONTH" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_LOAN_TERM">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PERIOD" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_MARITAL">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_NATIONAL">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_OCCUP">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_PEP">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_PROV">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="COUNTRY_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ABRV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_REL">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_REL_PARTY">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="EMP_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_RES_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_RM">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="EMP_CODE" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DESIG" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="BRANCH_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="PHONE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="SIGN" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_STOCK_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_TAX_RES_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_TAX_STATUS">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_TITLE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_MDL">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVE_BY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_MDL_RIGHT">
+    <Key>
+      <PropertyRef Name="MID" />
+      <PropertyRef Name="RIGHT_CODE" />
+    </Key>
+    <Property Name="MID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RIGHT_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_DESC_CODE" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="RIGHT_DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TRAN_MODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TRAN_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="RIGHT_URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ADM_PASS_HISTORY">
+    <Key>
+      <PropertyRef Name="USER_CODE" />
+      <PropertyRef Name="NO" />
+    </Key>
+    <Property Name="USER_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="NO" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="CODE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ADM_SETUP">
+    <Key>
+      <PropertyRef Name="COMP_CODE" />
+    </Key>
+    <Property Name="COMP_CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FORMERLY" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="FORMERLY_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ABRIVIATION" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_REG" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UAN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FAX" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NTN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LESSOR_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="INCOR_NO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="INCOR_DATE" Type="DateTime" Precision="3" />
+    <Property Name="SERVER_LOCATION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SLAB_DAYS" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="FINYEAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FINYEAR_FROM" Type="DateTime" Precision="3" />
+    <Property Name="FINYEAR_TO" Type="DateTime" Precision="3" />
+    <Property Name="GL_YEAR" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CURRENT_YEAR" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="GLYEAR_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="UN_URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NACTA_URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ATL_URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ATL_PATH" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SMS_URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_USER_BRANCH">
+    <Key>
+      <PropertyRef Name="MID" />
+      <PropertyRef Name="USER_CODE" />
+      <PropertyRef Name="BRANCH_CODE" />
+    </Key>
+    <Property Name="MID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="USER_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="BRANCH_CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="BRANCH_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BRANCH_FLAG" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_USER_LEVEL">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_USER_LEVEL_RIGHTS">
+    <Key>
+      <PropertyRef Name="MID" />
+      <PropertyRef Name="LEVEL_CODE" />
+      <PropertyRef Name="RIGHT_CODE" />
+    </Key>
+    <Property Name="MID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LEVEL_CODE" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TRAN_MODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TRAN_CODE" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="RIGHT_FLAG" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_USER_MDL">
+    <Key>
+      <PropertyRef Name="USER_CODE" />
+      <PropertyRef Name="MID" />
+    </Key>
+    <Property Name="USER_CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MID_FLAG" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="LEVEL_CODE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="LOGIN" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="LOGIN_ON" Type="DateTime" Precision="3" />
+    <Property Name="LOGOUT_ON" Type="DateTime" Precision="3" />
+    <Property Name="LAST_LOGIN" Type="DateTime" Precision="3" />
+    <Property Name="ATTEMPT" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="LOCK" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="LOCK_DATE" Type="DateTime" Precision="3" />
+    <Property Name="DORMANT" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="DORMANT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="MIN_RATE" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="MAX_RATE" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="MIN_LIMIT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MAX_LIMIT" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="ADM_USER_RIGHT">
+    <Key>
+      <PropertyRef Name="USER_CODE" />
+      <PropertyRef Name="MID" />
+      <PropertyRef Name="RIGHT_CODE" />
+    </Key>
+    <Property Name="USER_CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LEVEL_CODE" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="RIGHT_CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_DESC_CODE" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="RIGHT_DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TRAN_MODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TRAN_CODE" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_FLAG" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="RIGHT_URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ADM_USER_RIGHTS">
+    <Key>
+      <PropertyRef Name="USER_CODE" />
+      <PropertyRef Name="MID" />
+      <PropertyRef Name="RIGHT_CODE" />
+    </Key>
+    <Property Name="USER_CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LEVEL_CODE" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="RIGHT_CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_DESC_CODE" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="RIGHT_DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TRAN_MODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TRAN_CODE" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_FLAG" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="RIGHT_URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ADM_USERS">
+    <Key>
+      <PropertyRef Name="USER_CODE" />
+    </Key>
+    <Property Name="CREATION" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY" Type="DateTime" Precision="3" />
+    <Property Name="USER_CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="EMP_CODE" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="CODE" Type="Binary" MaxLength="50" FixedLength="false" />
+    <Property Name="PASS_EXPIRY_DAYS" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="PASS_CHANGE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="DORMANT_DAYS" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CDD_CLIENT">
+    <Key>
+      <PropertyRef Name="PARTY_CODE" />
+      <PropertyRef Name="DD_CODE" />
+    </Key>
+    <Property Name="TRAN_DATE" Type="DateTime" Precision="3" />
+    <Property Name="TYPE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="EVENT_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PARTY_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DD_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CLIENT_TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TAX_RES_TYPE" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="TAX_STATUS" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="TAX_EXPIRY" Type="DateTime" Precision="3" />
+    <Property Name="TAX_EXEMPT_REASON" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DOC_TYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CNIC" Type="Decimal" Precision="13" Scale="0" />
+    <Property Name="CNIC_EXPIRY" Type="DateTime" Precision="3" />
+    <Property Name="PASS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PASS_EXPIRY" Type="DateTime" Precision="3" />
+    <Property Name="CNIC_OTH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CNIC_OTH_EXPIRY" Type="DateTime" Precision="3" />
+    <Property Name="NTN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="INCORP_COUNTRY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="INCORP_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="INCORP_DATE" Type="DateTime" Precision="3" />
+    <Property Name="IND" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="CAT" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="TITLE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADD_PERM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADD_CITY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="PHONE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FAX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GROUP_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="CONTACT_PERSON" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACT_PERSON_DESIG" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RM_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="ZAKAT_EXEMPT" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="ZAKAT_EXEMPT_CERT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZAKAT_RATE" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="DD_TYPE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PEP_STATUS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RISK_LEVEL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BUSINESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="KYC_STATUS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FATCA_STATUS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="CDD_CLIENT_BANK">
+    <Key>
+      <PropertyRef Name="PARTY_CODE" />
+      <PropertyRef Name="DD_CODE" />
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PARTY_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DD_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="BANK_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="BANK_BR_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AC_TITLE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AC_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JOINT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RELATION" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="PHONE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CDD_CLIENT_CON">
+    <Key>
+      <PropertyRef Name="PARTY_CODE" />
+      <PropertyRef Name="DD_CODE" />
+    </Key>
+    <Property Name="PARTY_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="RES_STATUS" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="FATHER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MOTHER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GENDER" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="MARITAL" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="SPOUSE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="BIRTH_PLACE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EDUCAT" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="DD_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="RES_TYPE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="OCCUP" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="GUAR_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="GUAR_REL" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="NATIONAL" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="DEPEND" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="BIRTH_CITY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="BIRTH_COUNTRY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="COS" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="COS_ADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="REL_PARTY" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="REL_PARTY_CODE" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="REL_PARTY_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="REL_PARTY_REL" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="NTK_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NTK_REL" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="NTK_ADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NTK_PHONE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="NTK_CNIC" Type="Decimal" Precision="13" Scale="0" />
+    <Property Name="NTK_CNIC_EXPIRY" Type="DateTime" Precision="3" />
+    <Property Name="BEN" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="BEN_PARTY_CODE" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BEN_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BEN_ADDRESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BEN_CNIC" Type="Decimal" Precision="15" Scale="0" />
+    <Property Name="BEN_OCCUP" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="BEN_REL" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="BUSS_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BUSS_TYPE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="BUSS_ADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BUSS_PHONE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="BUSS_NOY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="BUSS_NOE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="BUSS_NTN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BUSS_APPROX_INCOME" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="EMPL_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EMPL_TYPE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="EMPL_ADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EMPL_PHONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMPL_DESIG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMPL_DOJ" Type="DateTime" Precision="3" />
+    <Property Name="EMPL_SERVICE_PERIOD" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="EMPL_STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMPL_APPROX_SAL" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="CDD_CLIENT_DIR">
+    <Key>
+      <PropertyRef Name="PARTY_CODE" />
+      <PropertyRef Name="DD_CODE" />
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PARTY_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DD_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CODE" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADD_PERM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FATHER" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="MOTHER" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="GENDER" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="MARITAL" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="SPOUSE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CNIC" Type="Decimal" Precision="13" Scale="0" />
+    <Property Name="CNIC_EXPIRY" Type="DateTime" Precision="3" />
+    <Property Name="PASST_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PASS_EXPIRY" Type="DateTime" Precision="3" />
+    <Property Name="SHARES" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="DOJ" Type="DateTime" Precision="3" />
+    <Property Name="DOL" Type="DateTime" Precision="3" />
+    <Property Name="TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TNOM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="NNOM" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="PROFESSION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BIRTH_COUNTRY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="BIRTH_CITY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="BIRTH_PLACE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NATIONALITY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="COS" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="COS_ADDS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PEP_STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REL_OTHR_ORG" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_SIGN" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="CDD_CLIENT_GUA">
+    <Key>
+      <PropertyRef Name="PARTY_CODE" />
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PARTY_CODE" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADD_PREM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CNIC" Type="Decimal" Precision="15" Scale="0" />
+    <Property Name="CNIC_EXPIRY" Type="DateTime" Precision="0" />
+    <Property Name="DOB" Type="DateTime" Precision="0" />
+    <Property Name="FATHER" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MOTHER" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SPOUSE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="COS" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="COS_ADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CITY_BIRTH" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="COUNTRY_BIRTH" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="COUNTRY_NATIONAL" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="LIAB_G" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="LIAB_B" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_SIGN" Type="Decimal" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="CDD_CLIENT_NATIONAL">
+    <Key>
+      <PropertyRef Name="PARTY_CODE" />
+      <PropertyRef Name="DD_CODE" />
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PARTY_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DD_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="COUNTRY_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="ORIGIN" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="CNIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CNIC_EXPIRY" Type="DateTime" Precision="3" />
+    <Property Name="NTN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAX_STATUS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="TAX_FILE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="COMMENTS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LMS_CLIENT_LIMIT">
+    <Key>
+      <PropertyRef Name="TRAN_CODE" />
+    </Key>
+    <Property Name="TRAN_CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TRAN_DATE" Type="DateTime" Precision="0" />
+    <Property Name="PARTY_CODE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="LEASE_CAT" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="LIMIT_TYPE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="EFFECT_DATE" Type="DateTime" Precision="0" />
+    <Property Name="LIMIT" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_AMORT_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_ASET_CAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_ASET_MAKE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_ASET_MANUFACT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_ASET_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BCA_APPLI_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BCA_FACI_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BCA_RENEWAL">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BCA_TYPES">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BRWR_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BUS_CAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BUS_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_BRWR_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_BUS_CAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_BUS_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_IND">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_PROD">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_PROV">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="COUNTRY_CODE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ABRV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_SECT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_STATUS">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_COLAT_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="COLAT_DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CORP_STAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="COR_TYPE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CORP_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_EDU">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_EMPL_STATUS">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_lMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_EMPL_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_FACILITY_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_GROUP">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_IND">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_IND_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_ISIC">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ISIC_CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LEASE_NAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LEASE_NAT_SUB">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="LEASE_NAT" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LEASE_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LEASE_TYPE_SUB">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="LEASE_TYPE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LEND_INST">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LESSEE_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="TYPE" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LITI_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_NFBI_SECT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_NICODE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NICODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_NP_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_PAY_MODE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_PERIOD">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_PROV">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_RENT_MODE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_RES_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE_LMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_SECTOR">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_SUP">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_TITLE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_VALUATOR">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="AUTH_DATE" Type="DateTime" Precision="3" />
+    <Property Name="AUTH_BY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="INACTIVE" Type="Decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityContainer Name="BMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ADM_AUTH_STATUS" EntityType="Self.ADM_AUTH_STATUS" />
+    <EntitySet Name="ADM_DAILY_KIBOR" EntityType="Self.ADM_DAILY_KIBOR" />
+    <EntitySet Name="ADM_DEF_BANK" EntityType="Self.ADM_DEF_BANK" />
+    <EntitySet Name="ADM_DEF_BANK_AC_TYPE" EntityType="Self.ADM_DEF_BANK_AC_TYPE" />
+    <EntitySet Name="ADM_DEF_BANK_BR" EntityType="Self.ADM_DEF_BANK_BR" />
+    <EntitySet Name="ADM_DEF_BRANCH" EntityType="Self.ADM_DEF_BRANCH" />
+    <EntitySet Name="ADM_DEF_BUS_TYPE" EntityType="Self.ADM_DEF_BUS_TYPE" />
+    <EntitySet Name="ADM_DEF_CHQ_TYPE" EntityType="Self.ADM_DEF_CHQ_TYPE" />
+    <EntitySet Name="ADM_DEF_CITY" EntityType="Self.ADM_DEF_CITY" />
+    <EntitySet Name="ADM_DEF_CLIENT_TYPE" EntityType="Self.ADM_DEF_CLIENT_TYPE" />
+    <EntitySet Name="ADM_DEF_COUNTRY" EntityType="Self.ADM_DEF_COUNTRY" />
+    <EntitySet Name="ADM_DEF_DD_TYPE" EntityType="Self.ADM_DEF_DD_TYPE" />
+    <EntitySet Name="ADM_DEF_DOC_TYPE" EntityType="Self.ADM_DEF_DOC_TYPE" />
+    <EntitySet Name="ADM_DEF_EDU" EntityType="Self.ADM_DEF_EDU" />
+    <EntitySet Name="ADM_DEF_EMAIL_SETTINGS" EntityType="Self.ADM_DEF_EMAIL_SETTINGS" />
+    <EntitySet Name="ADM_DEF_FINYEAR" EntityType="Self.ADM_DEF_FINYEAR" />
+    <EntitySet Name="ADM_DEF_FLOAT" EntityType="Self.ADM_DEF_FLOAT" />
+    <EntitySet Name="ADM_DEF_FLOAT_FREQ" EntityType="Self.ADM_DEF_FLOAT_FREQ" />
+    <EntitySet Name="ADM_DEF_GENDER" EntityType="Self.ADM_DEF_GENDER" />
+    <EntitySet Name="ADM_DEF_GROUP" EntityType="Self.ADM_DEF_GROUP" />
+    <EntitySet Name="ADM_DEF_INSU_CO" EntityType="Self.ADM_DEF_INSU_CO" />
+    <EntitySet Name="ADM_DEF_KIBOR_FREQ" EntityType="Self.ADM_DEF_KIBOR_FREQ" />
+    <EntitySet Name="ADM_DEF_KIBOR_MONT" EntityType="Self.ADM_DEF_KIBOR_MONT" />
+    <EntitySet Name="ADM_DEF_LOAN_TERM" EntityType="Self.ADM_DEF_LOAN_TERM" />
+    <EntitySet Name="ADM_DEF_MARITAL" EntityType="Self.ADM_DEF_MARITAL" />
+    <EntitySet Name="ADM_DEF_NATIONAL" EntityType="Self.ADM_DEF_NATIONAL" />
+    <EntitySet Name="ADM_DEF_OCCUP" EntityType="Self.ADM_DEF_OCCUP" />
+    <EntitySet Name="ADM_DEF_PEP" EntityType="Self.ADM_DEF_PEP" />
+    <EntitySet Name="ADM_DEF_PROV" EntityType="Self.ADM_DEF_PROV" />
+    <EntitySet Name="ADM_DEF_REL" EntityType="Self.ADM_DEF_REL" />
+    <EntitySet Name="ADM_DEF_REL_PARTY" EntityType="Self.ADM_DEF_REL_PARTY" />
+    <EntitySet Name="ADM_DEF_RES_TYPE" EntityType="Self.ADM_DEF_RES_TYPE" />
+    <EntitySet Name="ADM_DEF_RM" EntityType="Self.ADM_DEF_RM" />
+    <EntitySet Name="ADM_DEF_STOCK_TYPE" EntityType="Self.ADM_DEF_STOCK_TYPE" />
+    <EntitySet Name="ADM_DEF_TAX_RES_TYPE" EntityType="Self.ADM_DEF_TAX_RES_TYPE" />
+    <EntitySet Name="ADM_DEF_TAX_STATUS" EntityType="Self.ADM_DEF_TAX_STATUS" />
+    <EntitySet Name="ADM_DEF_TITLE" EntityType="Self.ADM_DEF_TITLE" />
+    <EntitySet Name="ADM_MDL" EntityType="Self.ADM_MDL" />
+    <EntitySet Name="ADM_MDL_RIGHT" EntityType="Self.ADM_MDL_RIGHT" />
+    <EntitySet Name="ADM_PASS_HISTORY" EntityType="Self.ADM_PASS_HISTORY" />
+    <EntitySet Name="ADM_SETUP" EntityType="Self.ADM_SETUP" />
+    <EntitySet Name="ADM_USER_BRANCH" EntityType="Self.ADM_USER_BRANCH" />
+    <EntitySet Name="ADM_USER_LEVEL" EntityType="Self.ADM_USER_LEVEL" />
+    <EntitySet Name="ADM_USER_LEVEL_RIGHTS" EntityType="Self.ADM_USER_LEVEL_RIGHTS" />
+    <EntitySet Name="ADM_USER_MDL" EntityType="Self.ADM_USER_MDL" />
+    <EntitySet Name="ADM_USER_RIGHT" EntityType="Self.ADM_USER_RIGHT" />
+    <EntitySet Name="ADM_USER_RIGHTS" EntityType="Self.ADM_USER_RIGHTS" />
+    <EntitySet Name="ADM_USERS" EntityType="Self.ADM_USERS" />
+    <EntitySet Name="CDD_CLIENT" EntityType="Self.CDD_CLIENT" />
+    <EntitySet Name="CDD_CLIENT_BANK" EntityType="Self.CDD_CLIENT_BANK" />
+    <EntitySet Name="CDD_CLIENT_CON" EntityType="Self.CDD_CLIENT_CON" />
+    <EntitySet Name="CDD_CLIENT_DIR" EntityType="Self.CDD_CLIENT_DIR" />
+    <EntitySet Name="CDD_CLIENT_GUA" EntityType="Self.CDD_CLIENT_GUA" />
+    <EntitySet Name="CDD_CLIENT_NATIONAL" EntityType="Self.CDD_CLIENT_NATIONAL" />
+    <EntitySet Name="LMS_CLIENT_LIMIT" EntityType="Self.LMS_CLIENT_LIMIT" />
+    <EntitySet Name="LMS_DEF_AMORT_TYPE" EntityType="Self.LMS_DEF_AMORT_TYPE" />
+    <EntitySet Name="LMS_DEF_ASET_CAT" EntityType="Self.LMS_DEF_ASET_CAT" />
+    <EntitySet Name="LMS_DEF_ASET_MAKE" EntityType="Self.LMS_DEF_ASET_MAKE" />
+    <EntitySet Name="LMS_DEF_ASET_MANUFACT" EntityType="Self.LMS_DEF_ASET_MANUFACT" />
+    <EntitySet Name="LMS_DEF_ASET_TYPE" EntityType="Self.LMS_DEF_ASET_TYPE" />
+    <EntitySet Name="LMS_DEF_BCA_APPLI_TYPE" EntityType="Self.LMS_DEF_BCA_APPLI_TYPE" />
+    <EntitySet Name="LMS_DEF_BCA_FACI_TYPE" EntityType="Self.LMS_DEF_BCA_FACI_TYPE" />
+    <EntitySet Name="LMS_DEF_BCA_RENEWAL" EntityType="Self.LMS_DEF_BCA_RENEWAL" />
+    <EntitySet Name="LMS_DEF_BCA_TYPES" EntityType="Self.LMS_DEF_BCA_TYPES" />
+    <EntitySet Name="LMS_DEF_BRWR_TYPE" EntityType="Self.LMS_DEF_BRWR_TYPE" />
+    <EntitySet Name="LMS_DEF_BUS_CAT" EntityType="Self.LMS_DEF_BUS_CAT" />
+    <EntitySet Name="LMS_DEF_BUS_TYPE" EntityType="Self.LMS_DEF_BUS_TYPE" />
+    <EntitySet Name="LMS_DEF_CAT" EntityType="Self.LMS_DEF_CAT" />
+    <EntitySet Name="LMS_DEF_CIB_BRWR_TYPE" EntityType="Self.LMS_DEF_CIB_BRWR_TYPE" />
+    <EntitySet Name="LMS_DEF_CIB_BUS_CAT" EntityType="Self.LMS_DEF_CIB_BUS_CAT" />
+    <EntitySet Name="LMS_DEF_CIB_BUS_TYPE" EntityType="Self.LMS_DEF_CIB_BUS_TYPE" />
+    <EntitySet Name="LMS_DEF_CIB_IND" EntityType="Self.LMS_DEF_CIB_IND" />
+    <EntitySet Name="LMS_DEF_CIB_PROD" EntityType="Self.LMS_DEF_CIB_PROD" />
+    <EntitySet Name="LMS_DEF_CIB_PROV" EntityType="Self.LMS_DEF_CIB_PROV" />
+    <EntitySet Name="LMS_DEF_CIB_SECT" EntityType="Self.LMS_DEF_CIB_SECT" />
+    <EntitySet Name="LMS_DEF_CIB_STATUS" EntityType="Self.LMS_DEF_CIB_STATUS" />
+    <EntitySet Name="LMS_DEF_CIB_TYPE" EntityType="Self.LMS_DEF_CIB_TYPE" />
+    <EntitySet Name="LMS_DEF_COLAT_TYPE" EntityType="Self.LMS_DEF_COLAT_TYPE" />
+    <EntitySet Name="LMS_DEF_CORP_STAT" EntityType="Self.LMS_DEF_CORP_STAT" />
+    <EntitySet Name="LMS_DEF_CORP_TYPE" EntityType="Self.LMS_DEF_CORP_TYPE" />
+    <EntitySet Name="LMS_DEF_EDU" EntityType="Self.LMS_DEF_EDU" />
+    <EntitySet Name="LMS_DEF_EMPL_STATUS" EntityType="Self.LMS_DEF_EMPL_STATUS" />
+    <EntitySet Name="LMS_DEF_EMPL_TYPE" EntityType="Self.LMS_DEF_EMPL_TYPE" />
+    <EntitySet Name="LMS_DEF_FACILITY_TYPE" EntityType="Self.LMS_DEF_FACILITY_TYPE" />
+    <EntitySet Name="LMS_DEF_GROUP" EntityType="Self.LMS_DEF_GROUP" />
+    <EntitySet Name="LMS_DEF_IND" EntityType="Self.LMS_DEF_IND" />
+    <EntitySet Name="LMS_DEF_IND_TYPE" EntityType="Self.LMS_DEF_IND_TYPE" />
+    <EntitySet Name="LMS_DEF_ISIC" EntityType="Self.LMS_DEF_ISIC" />
+    <EntitySet Name="LMS_DEF_LEASE_NAT" EntityType="Self.LMS_DEF_LEASE_NAT" />
+    <EntitySet Name="LMS_DEF_LEASE_NAT_SUB" EntityType="Self.LMS_DEF_LEASE_NAT_SUB" />
+    <EntitySet Name="LMS_DEF_LEASE_TYPE" EntityType="Self.LMS_DEF_LEASE_TYPE" />
+    <EntitySet Name="LMS_DEF_LEASE_TYPE_SUB" EntityType="Self.LMS_DEF_LEASE_TYPE_SUB" />
+    <EntitySet Name="LMS_DEF_LEND_INST" EntityType="Self.LMS_DEF_LEND_INST" />
+    <EntitySet Name="LMS_DEF_LESSEE_TYPE" EntityType="Self.LMS_DEF_LESSEE_TYPE" />
+    <EntitySet Name="LMS_DEF_LITI_TYPE" EntityType="Self.LMS_DEF_LITI_TYPE" />
+    <EntitySet Name="LMS_DEF_NFBI_SECT" EntityType="Self.LMS_DEF_NFBI_SECT" />
+    <EntitySet Name="LMS_DEF_NICODE" EntityType="Self.LMS_DEF_NICODE" />
+    <EntitySet Name="LMS_DEF_NP_TYPE" EntityType="Self.LMS_DEF_NP_TYPE" />
+    <EntitySet Name="LMS_DEF_PAY_MODE" EntityType="Self.LMS_DEF_PAY_MODE" />
+    <EntitySet Name="LMS_DEF_PERIOD" EntityType="Self.LMS_DEF_PERIOD" />
+    <EntitySet Name="LMS_DEF_PROV" EntityType="Self.LMS_DEF_PROV" />
+    <EntitySet Name="LMS_DEF_RENT_MODE" EntityType="Self.LMS_DEF_RENT_MODE" />
+    <EntitySet Name="LMS_DEF_RES_TYPE" EntityType="Self.LMS_DEF_RES_TYPE" />
+    <EntitySet Name="LMS_DEF_SECTOR" EntityType="Self.LMS_DEF_SECTOR" />
+    <EntitySet Name="LMS_DEF_SUP" EntityType="Self.LMS_DEF_SUP" />
+    <EntitySet Name="LMS_DEF_TITLE" EntityType="Self.LMS_DEF_TITLE" />
+    <EntitySet Name="LMS_DEF_VALUATOR" EntityType="Self.LMS_DEF_VALUATOR" />
+  </EntityContainer>
+</Schema>

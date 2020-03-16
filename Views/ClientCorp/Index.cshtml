@@ -1,0 +1,666 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+
+
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Client Information - Corporate</title>
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="Scripts/jquery-3.4.1.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery('.tabs .tab-links a').on('click', function (e) {
+                var currentAttrValue = jQuery(this).attr('href');
+
+                // Show/Hide Tabs
+                jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+
+                // Change/remove current tab to active
+                jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+
+                e.preventDefault();
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /*----- Tabs -----*/
+        .tabs {
+            width: 100%;
+            display: inline-block;
+        }
+
+        /*----- Tab Links -----*/
+        /* Clearfix */
+        .tab-links:after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+
+        .tab-links li {
+            margin: 0px 5px;
+            float: left;
+            list-style: none;
+        }
+
+        .tab-links a {
+            padding: 9px 15px;
+            display: inline-block;
+            border-radius: 3px 3px 0px 0px;
+            background: #7FB5DA;
+            font-size: 16px;
+            font-weight: 600;
+            color: #4c4c4c;
+            transition: all linear 0.15s;
+        }
+
+            .tab-links a:hover {
+                background: #a7cce5;
+                text-decoration: none;
+            }
+
+        li.active a, li.active a:hover {
+            background: #fff;
+            color: #4c4c4c;
+        }
+
+        /*----- Content of Tabs -----*/
+        .tab-content {
+            padding: 15px;
+            border-radius: 3px;
+            box-shadow: -1px 1px 1px rgba(0,0,0,0.15);
+            background: #fff;
+        }
+
+        .tab {
+            display: none;
+        }
+
+            .tab.active {
+                display: block;
+            }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0 15px;
+            width: 100%
+        }
+
+        th, td {
+            width: 130px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="col-md-9" style="padding-left:200px">
+        <h2>Dashboard Client Information - Corporate</h2>
+        <div class="tabs">
+            <ul class="tab-links">
+                <li class="active"><a href="#tab1">General Information</a></li>
+                <li><a href="#tab2">Corporate</a></li>
+                <li><a href="#tab3">Directors</a></li>
+                <li><a href="#tab4">Guarantors</a></li>
+                <li><a href="#tab5">Intermediate Company</a></li>
+                <li><a href="#tab6">Intermediate Co. Directors</a></li>
+                <li><a href="#tab7">Mandate Holders</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="tab1" class="tab active">
+                    <Table ID="Table1">
+                        <tr>
+                            <td><label for="PartyCode">Party Code</label></td>
+                            <td><input type="text" class="form-control" id="PartyCode" placeholder="Party Code" /></td>
+                            <td><button id="PARTYCODEBTN" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="return loadData();"><i class="fa fa-eye"></i></button></td>
+                            <td><label for="CreationDate">Creation Date</label></td>
+                            <td><input type="date" class="form-control" id="CreationDate" placeholder="Creation Date" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="KYCCode">KYC Code</label></td>
+                            <td><input type="text" class="form-control" id="KYCCode" placeholder="KYC Code" /></td>
+                            <td></td>
+                            <td><label for="DocType">Document Type</label></td>
+                            <td><select for="DocType" class="form-control" id="DocType" name="DocType"></select></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="CNIC">CNIC</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="CNIC" placeholder="CNIC" /></td>
+                            <td><label for="CNICExpiry">CNIC Expiry</label></td>
+                            <td colspan="2"><input type="date" class="form-control" id="CNICExpiry" placeholder="CNIC Expiry" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="PassportNo">Passport No</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="PassportNo" placeholder="Passport No" /></td>
+                            <td><label for="PassportExpiry">Passport Expiry</label></td>
+                            <td colspan="2"><input type="date" class="form-control" id="PassportExpiry" placeholder="Passport Expiry" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="ClientName">Client Name</label></td>
+                            <td><select for="Title" class="form-control" id="Title" name="Title" onchange="getVal"></select></td>
+                            <td colspan="5"><input type="text" class="form-control" id="ClientName" placeholder="Client Name" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="Address">Address</label></td>
+                            <td colspan="6"><input type="text" class="form-control" id="Address" placeholder="Address" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="PresentAddress">Present Address</label></td>
+                            <td colspan="6"><input type="text" class="form-control" id="PresentAddress" placeholder="Present Address" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="PermanentAddress">Permanent Address</label></td>
+                            <td colspan="6"><input type="text" class="form-control" id="PermanentAddress" placeholder="Permanent Address" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="City">City</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="City" placeholder="City" /></td>
+                            <td><label for="City">Fax</label></td>
+                            <td colspan="2"><input type="text" class="form-control" id="Fax" placeholder="Fax" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="Email">Email</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="Email" placeholder="Email" /></td>
+                            <td><label for="Phone">Phone</label></td>
+                            <td colspan="5"><input type="text" class="form-control" id="Phone" placeholder="Phone" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="AccManager">Account Manager</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="AccManager" placeholder="Account Manager" /></td>
+                            <td><label for="LeaseType">Lease Type</label></td>
+                            <td colspan="2"><select for="LeaseType" class="form-control" id="LeaseType" name="LeaseType"></select></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="Industry">Industry</label></td>
+                            <td colspan="3"><select for="Industry" class="form-control" id="Industry" name="Industry"></select></td>
+                            <td><label for="ISIC">ISIC Code</label></td>
+                            <td><input type="text" class="form-control" id="ISIC" placeholder="ISIC" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="UWS">UWS</label></td>
+                            <td colspan="3"><select for="UWS" class="form-control" id="UWS" name="UWS"></select></td>
+                            <td><label for="NAPerform">NA Performing</label></td>
+                            <td colspan="2"><select for="NAPerform" class="form-control" id="NAPerform" name="NAPerform"></select></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="PoliticalStatus">Political Status</label></td>
+                            <td colspan="3"><select for="PoliticalStatus" class="form-control" id="PoliticalStatus" name="PoliticalStatus"></select></td>
+                            <td><label for="CorpStatus">Corp. Status</label></td>
+                            <td colspan="2"><select for="CorpStatus" class="form-control" id="CorpStatus" name="CorpStatus"></select></td>
+                        </tr>
+
+
+                    </Table>
+                </div>
+
+                <div id="tab2" class="tab">
+                    <Table ID="Table2">
+                        <tr>
+                            <td><label for="RegAddress">Reg. Address</label></td>
+                            <td colspan="2"><input type="text" class="form-control" id="RegAddress" placeholder="Reg. Address" /></td>
+                            <td><label for="RegPhone">Reg. Phone</label></td>
+                            <td colspan="2"><input type="text" class="form-control" id="RegPhone" placeholder="Reg. Phone" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="ContactPerson">Contact Person</label></td>
+                            <td colspan="2"><input type="text" class="form-control" id="ContactPerson" placeholder="Contact Person" /></td>
+                            <td><label for="Designation">Designation</label></td>
+                            <td colspan="2"><input class="form-control" id="Designation" placeholder="Designation"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="GroupOfComp">Group Of Comp.</label></td>
+                            <td colspan="2"><select class="form-control" id="GroupOfComp" name="Group Of Comp"></select></td>
+                            <td><label for="BusinessDetails">Business Details</label></td>
+                            <td colspan="2"><textarea class="form-control" id="BusinessDetails" name="Business Details"></textarea></td>
+                            
+                        </tr>
+                        <tr><td colspan="6"><hr /></td></tr>
+                        <tr>
+                            <td><label for="CIBType">CIB Type</label></td>
+                            <td><select type="text" class="form-control" id="CIBType" name="CIBType"></select></td>
+                            <td><label for="BorrowerCode">Borrower Code</label></td>
+                            <td><input type="date" class="form-control" id="BorrowerCode" placeholder="DOB" /></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="ClientSize">Client Size</label></td>
+                            <td><select  class="form-control" id="ClientSize" placeholder="Client Size" ></select></td>
+                            <td><label for="Sector">Sector</label></td>
+                            <td><select class="form-control" id="Sector" placeholder="Sector"></select></td>
+                            <td><label for="NBFISector">NBFI Sector</label></td>
+                            <td><select  class="form-control" id="NBFISector" name="NBFISector"></select></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="ProvinceCode">Province Code</label></td>
+                            <td><select class="form-control" id="ProvinceCode" name="Province Code"></select></td>
+                            <td><label for="BusinessCode">Business Code</label></td>
+                            <td><select  class="form-control" id="BusinessCode" name="Business Code"></select></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="BorrowerType">Borrower Type</label></td>
+                            <td><select class="form-control" id="BorrowerType" name="BorrowerType"></select></td>
+                            <td><label for="CIBStatus">CIB Status</label></td>
+                            <td><input type="text" for="CountryStay" class="form-control" id="CIBStatus" name="CIB Status"/></td>
+                        </tr>
+
+                        
+                    </Table>
+                </div>
+
+                <div id="tab3" class="tab">
+                    <form ID="FormView3">
+
+                        <button id="btnAddDirectorDetails" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAddDirectorDetails">ADD</button>
+                    </form>
+                    <div style="overflow-x:auto;">
+                        <table id="tblAddDirectorDetails" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Director Name</th>
+                                    <th>Address</th>
+                                    <th>Present Address</th>
+                                    <th>Permanent Address</th>
+                                    <th>DOB</th>
+                                    <th>CNIC</th>
+                                    <th>CNIC Expiry</th>
+                                    <th>Passport</th>
+                                    <th>Passport Expiry</th>
+                                    <th>Father</th>
+                                    <th>Mother</th>
+                                    <th>Spouse</th>
+                                    <th>Gender</th>
+                                    <th>Profession</th>
+                                    <th>Marital</th>
+                                    <th>Share</th>
+                                    <th>DOJ</th>
+                                    <th>DOL</th>
+                                    <th>Type</th>
+                                    <th>TNOM</th>
+                                    <th>NNOM</th>
+                                    <th>Country</th>
+                                    <th>City</th>
+                                    <th>Birth Place</th>
+                                    <th>Nationality</th>
+                                    <th>Dual Nationality</th>
+                                    <th>COS</th>
+                                    <th>COS Address</th>
+                                    <th>Sign</th>
+                                    <th>PEP</th>
+                                    <th>REL Other Company</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbodyDirector"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="tab4" class="tab">
+                    <form ID="FormView4">
+
+                        <button id="btnAddGuarantorsDetails" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAddGuarantorsDetails">ADD</button>
+                    </form>
+                    <div style="overflow-x:auto;">
+                        <table id="tblAddGuarantorsDetails" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Guarantor's Name</th>
+                                    <th>Address</th>
+                                    <th>Present Address</th>
+                                    <th>Permanent Address</th>
+                                    <th>CNIC</th>
+                                    <th>CNIC Expiry</th>
+                                    <th>DOB</th>
+                                    <th>Father</th>
+                                    <th>Mother</th>
+                                    <th>Spouse</th>
+                                    <th>COS</th>
+                                    <th>COS Address</th>
+                                    <th>City Birth</th>
+                                    <th>Country Birth</th>
+                                    <th>Country Nationality</th>
+                                    <th>LIAB G</th>
+                                    <th>LIAB_B</th>
+                                    <th>Auth Sign</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbodyGuarantors"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="tab5" class="tab">
+                    <form ID="FormView5">
+                        <button id="btnAddCompanyDetails" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAddCompanyDetails">ADD</button>
+                    </form>
+                    <div style="overflow-x:auto;">
+                        <table id="tblAddCompanyDetails" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Name</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbodyBank"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="tab6" class="tab">
+                    <form ID="FormView6">
+                        <button id="btnAddCo_DirectorsDetails" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAddCo_DirectorsDetails">ADD</button>
+                        <div style="overflow-x:auto;">
+                            <table id="tblAddCo_DirectorsDetails" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>IMC CODE</th>
+                                        <th>Code</th>
+                                        <th>Name</th>
+                                        <th>Address</th>
+                                        <th>Present Address</th>
+                                        <th>Permanent Address</th>
+                                        <th>DOB</th>
+                                        <th>CNIC</th>
+                                        <th>CNIC Expiry</th>
+                                        <th>Passport</th>
+                                        <th>Passport Expiry</th>
+                                        <th>Father</th>
+                                        <th>Mother</th>
+                                        <th>Spouse</th>
+                                        <th>Gender</th>
+                                        <th>Profession</th>
+                                        <th>Marital</th>
+                                        <th>Share</th>
+                                        <th>DOJ</th>
+                                        <th>DOL</th>
+                                        <th>Type</th>
+                                        <th>TNOM</th>
+                                        <th>NNOM</th>
+                                        <th>Country</th>
+                                        <th>City</th>
+                                        <th>Birth Place</th>
+                                        <th>Nationality</th>
+                                        <th>Dual Nationality</th>
+                                        <th>COS</th>
+                                        <th>COS Address</th>
+                                        <th>Sign</th>
+                                        <th>PEP</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbodyCo_Directors"></tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="tab7" class="tab">
+                    <form ID="FormView7">
+                        <button id="btnAddMandateDetails" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAddMandateDetails">ADD</button>
+                        <div style="overflow-x:auto;">
+                            <table id="tblAddcDetails" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>CODE</th>
+                                        <th>Asset Name</th>
+                                        <th>Category</th>
+                                        <th>Condition</th>
+                                        <th>Useful Life</th>
+                                        <th>Location</th>
+                                        <th>Manufacturer</th>
+                                        <th>Asset Type</th>
+                                        <th>Supplier</th>
+                                        <th>Name</th>
+                                        <th>Address</th>
+                                        <th>Present Address</th>
+                                        <th>Permanent Address</th>
+                                        <th>DOB</th>
+                                        <th>CNIC</th>
+                                        <th>CNIC Expiry</th>
+                                        <th>Passport</th>
+                                        <th>Passport Expiry</th>
+                                        <th>Father</th>
+                                        <th>Mother</th>
+                                        <th>Spouse</th>
+                                        <th>Gender</th>
+                                        <th>Profession</th>
+                                        <th>Marital</th>
+                                        <th>Share</th>
+                                        <th>DOJ</th>
+                                        <th>DOL</th>
+                                        <th>Type</th>
+                                        <th>TNOM</th>
+                                        <th>NNOM</th>
+                                        <th>Country</th>
+                                        <th>City</th>
+                                        <th>Birth Place</th>
+                                        <th>Nationality</th>
+                                        <th>Dual Nationality</th>
+                                        <th>COS</th>
+                                        <th>COS Address</th>
+                                        <th>Sign</th>
+                                        <th>PEP</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbodyMandate"></tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <table>
+                <tr>
+                    <td><label for="AuthStatus">Auth Status</label></td>
+                    <td colspan="2"><input type="text" class="form-control" id="AuthStatus" placeholder="Auth Status" /></td>
+                    <td><label for="AuthBy">Auth By</label></td>
+                    <td colspan="4"><input type="text" class="form-control" id="AuthBy" placeholder="Auth By" /></td>
+                </tr>
+                <tr>
+                    <td><label for="AuthDate">Auth Date</label></td>
+                    <td><input type="date" class="form-control" id="AuthDate" placeholder="AuthDate" /></td>
+                    <td><label for="AuthRemark">Auth Remarks</label></td>
+                    <td colspan="4"><input type="text" class="form-control" id="AuthRemark" placeholder="AuthRemark" /></td>
+                </tr>
+            </table>
+        </div>
+        <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Add</button>
+        <button type="button" class="btn btn-primary" id="btnUpdate"  onclick="Update();">Update</button>
+        <button type="button" class="btn btn-primary" id="btnEdit"  onclick="Edit();">Edit</button>
+        <button type="button" class="btn btn-primary" id="btnDelete"  onclick="Delete();">Delete</button>
+        <button type="button" class="btn btn-primary" id="btnBackward" onclick="Backward();"><</button>
+        <button type="button" class="btn btn-primary" id="btnFirst" onclick="First();"><<</button>
+        <button type="button" class="btn btn-primary" id="btnLast" onclick="Last();">>></button>
+        <button type="button" class="btn btn-primary" id="btnForward" onclick="Forward();">></button>
+        <br />
+    </div>
+
+
+
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">View</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-responsive table-hover table-striped">
+                        <tr>
+
+                            <th>
+                                PARTY CODE
+                            </th>
+                            <th>
+                                NAME
+                            </th>
+                            <th>
+                                PHONE
+                            </th>
+
+                            <th></th>
+                        </tr>
+
+                        <tbody class="tbody" id="tbodyMaster"></tbody>
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModalAddDirectorDetails" tabindex="-1" role="dialog" aria-labelledby="myModalAddDirectorDetailsLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Add Director Details</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-responsive table-hover" id="InsertDirectorDetails">
+                        <tr>
+                            <td><label for="PARTY_CODE_BANK">PARTY CODE</label></td>
+                            <td><input type="text" class="form-control" id="PARTY_CODE_NATIONAL" placeholder="PARTY CODE" /></td>
+                            <td><label for="DD_CODE_NATIONAL">DD CODE</label></td>
+                            <td><input type="text" class="form-control" id="DD_CODE_NATIONAL" placeholder="DD CODE" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="CODE_NATIONAL">CODE</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="CODE_NATIONAL" placeholder="CODE" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="COUNTRY_CODE_NAME">Country Name</label></td>
+                            <td colspan="3"><select class="form-control" id="COUNTRY_CODE_NAME" name="COUNTRY_CODE_NAME" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Origin_NATIONAL">Origin</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="Origin_NATIONAL" placeholder="Origin" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="CNIC_NATIONAL">CNIC</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="CNIC_NATIONAL" placeholder="CNIC" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="CNIC_Expiry_NATIONAL">CNIC Expiry</label></td>
+                            <td colspan="3"><input type="date" class="form-control" id="CNIC_Expiry_NATIONAL" placeholder="CNIC Expiry" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="NTN">NTN</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="NTN" placeholder="NTN" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Tax_Status_NATIONAL">Tax Status</label></td>
+                            <td colspan="3"><select class="form-control" id="Tax_Status_NATIONAL" name="Tax Status" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Tax_File_Date_NATIONAL">Tax File Date</label></td>
+                            <td colspan="3"><input type="date" class="form-control" id="Tax_File_Date_NATIONAL" placeholder="Tax File Date" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="COMMENT_NATIONAL">Comment</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="COMMENT_NATIONAL" placeholder="Comment" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="btnAddDirectorDetails" onclick="AddDirectorDetails();">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModalAddGuarantorsDetails" tabindex="-1" role="dialog" aria-labelledby="myModalAddGuarantorsDetailsLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Add Guarantors Details</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-responsive table-hover" id="InsertGuarantorsDetails">
+                        <tr>
+                            <td><label for="PARTY_CODE_BANK">PARTY CODE</label></td>
+                            <td><input type="text" class="form-control" id="PARTY_CODE_BANK" placeholder="PARTY CODE" /></td>
+                            <td><label for="DD_CODE_BANK">DD CODE</label></td>
+                            <td><input type="text" class="form-control" id="DD_CODE_BANK" placeholder="DD CODE" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="CODE_BANK">CODE</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="CODE_BANK" placeholder="CODE" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="BRANCH_CODE_NAME">Branch Name</label></td>
+                            <td colspan="3"><select class="form-control" id="BRANCH_CODE_NAME" name="BRANCH_CODE_NAME" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="ACC_TITLE_BANK">Account Title</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="ACC_TITLE_BANK" placeholder="Account Title" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="ACC_NO_BANK">Account No.</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="ACC_NO_BANK" placeholder="Account No." /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="JOINT_BANK">JOINT</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="JOINT_BANK" placeholder="JOINT" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="NAME_BANK">NAME</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="NAME_BANK" placeholder="NAME" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="RELATION_CODE_NAME">Relation</label></td>
+                            <td colspan="3"><select class="form-control" id="RELATION_CODE_NAME" name="RELATION_CODE_NAME" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="PHONE_BANK">PHONE</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="PHONE_BANK" placeholder="PHONE" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="EMAIL_BANK">EMAIL</label></td>
+                            <td colspan="3"><input type="text" class="form-control" id="EMAIL_BANK" placeholder="EMAIL" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="btnAddGuarantorsDetails" onclick="AddGuarantorsDetails();">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

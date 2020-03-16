@@ -1,0 +1,1771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADM_AUTH_STATUS">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DAILY_KIBOR">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="RATE_DATE" Type="datetime" />
+    <Property Name="WEEK_1" Type="decimal" Precision="12" Scale="5" />
+    <Property Name="WEEK_2" Type="decimal" Precision="12" Scale="5" />
+    <Property Name="RATE_1" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="RATE_3" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="RATE_6" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="RATE_9" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="RATE_12" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="RATE_24" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="RATE_36" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_BANK">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="ABRV" Type="varchar" MaxLength="50" />
+    <Property Name="ADD" Type="varchar(max)" />
+    <Property Name="UAN" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="TRF_REF_CODE" Type="varchar(max)" />
+    <Property Name="FBL_REF_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="BAL_REF_CODE" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_BANK_AC_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="TYPE" Type="varchar" MaxLength="5" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_BANK_BR">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="BANK_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="ADDRESS" Type="varchar(max)" />
+    <Property Name="PHONE" Type="varchar" MaxLength="50" />
+    <Property Name="FAX" Type="varchar" MaxLength="50" />
+    <Property Name="MANAGER" Type="varchar" MaxLength="80" />
+    <Property Name="TELE" Type="varchar" MaxLength="50" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_BRANCH">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="ABRV" Type="varchar" MaxLength="50" />
+    <Property Name="CITY_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="HDBR_CD" Type="decimal" Precision="2" Scale="0" />
+    <Property Name="ADDRESS" Type="varchar(max)" />
+    <Property Name="PHONE" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="80" />
+    <Property Name="MANAGER" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_BUS_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_CHQ_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="PAY_MODE" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="CHQ_FROM" Type="varchar" MaxLength="20" />
+    <Property Name="CHQ_TO" Type="varchar" MaxLength="20" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_CITY">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="COUNTRY_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="PROV_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="ABRV" Type="varchar" MaxLength="50" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_CLIENT_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TYPE" Type="varchar" MaxLength="4" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_COUNTRY">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" Nullable="false" />
+    <Property Name="RISK_RATING" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_DD_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TYPE" Type="varchar" MaxLength="4" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_DOC_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="TYPE" Type="varchar" MaxLength="5" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_EDU">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_EMAIL_SETTINGS">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SENDER" Type="varchar" MaxLength="50" />
+    <Property Name="RECPT" Type="varchar(max)" />
+    <Property Name="CC" Type="varchar(max)" />
+    <Property Name="BCC" Type="varchar(max)" />
+    <Property Name="TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_FINYEAR">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FINYEAR" Type="varchar" MaxLength="10" />
+    <Property Name="FINYEAR_FROM" Type="date" />
+    <Property Name="FINYEAR_TO" Type="date" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="YEAR_END" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="YEAR_END_DATE" Type="date" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_FLOAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="FLOAT_RATE" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="FLOAT_DAYS" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="FLOAT_MONTH" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="FLOAT_FIX_DAY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="FLOAT_FIX_MONTH" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="KIBOR_MONTH" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_FLOAT_FREQ">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="MONTH" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_GENDER">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_GROUP">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="REL_DATE" Type="datetime" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_INSU_CO">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="ADD" Type="varchar(max)" />
+    <Property Name="PHONE" Type="varchar(max)" />
+    <Property Name="EMAIL" Type="varchar(max)" />
+    <Property Name="PERSON_BUS" Type="varchar(max)" />
+    <Property Name="PERSON_DESIG_BUS" Type="varchar(max)" />
+    <Property Name="PERSON_ADD_BUS" Type="varchar(max)" />
+    <Property Name="PERSON_PHONE_BUS" Type="varchar(max)" />
+    <Property Name="PERSON_CLM" Type="varchar(max)" />
+    <Property Name="PERSON_DESIG_CLM" Type="varchar(max)" />
+    <Property Name="PERSON_ADD_CLM" Type="varchar(max)" />
+    <Property Name="PERSON_PHONE_CLM" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFS" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_KIBOR_FREQ">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="MONTH" Type="decimal" Precision="2" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_KIBOR_MONT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="MONTH" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_LOAN_TERM">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="PERIOD" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_MARITAL">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_NATIONAL">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_OCCUP">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="TYPE" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_PEP">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_PROV">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="COUNTRY_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="ABRV" Type="varchar" MaxLength="50" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_REL">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_REL_PARTY">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="EMP_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_RES_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TYPE" Type="varchar" MaxLength="1" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_RM">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="EMP_CODE" Type="varchar" MaxLength="7" />
+    <Property Name="NAME" Type="varchar(max)" />
+    <Property Name="DESIG" Type="varchar" MaxLength="80" />
+    <Property Name="BRANCH_CODE" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="PHONE" Type="varchar" MaxLength="60" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="60" />
+    <Property Name="MOBILE" Type="varchar" MaxLength="60" />
+    <Property Name="SIGN" Type="image" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_IMS" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_LMS" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_STOCK_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_TAX_RES_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_TAX_STATUS">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_DEF_TITLE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_MDL">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MID" Type="varchar" MaxLength="3" />
+    <Property Name="NAME" Type="varchar(max)" />
+    <Property Name="ACTIVE_DATE" Type="datetime" />
+    <Property Name="ACTIVE_BY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="INACTIVE" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'BMS.dbo.ADM_MDL_POLICY' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ADM_MDL_POLICY">
+          <Property Name="PASS_LENGHT" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="PASS_EXPIRY_DAYS" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="DORMANT_DAYS" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="NO_OF_HISTORY" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="INVALID_ATTEMPT" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="SESSION_TIMEOUT" Type="numeric" Precision="5" Scale="0" />
+        </EntityType>-->
+  <EntityType Name="ADM_MDL_RIGHT">
+    <Key>
+      <PropertyRef Name="MID" />
+      <PropertyRef Name="RIGHT_CODE" />
+    </Key>
+    <Property Name="MID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="RIGHT_CODE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_DESC_CODE" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="RIGHT_DESC" Type="varchar(max)" />
+    <Property Name="TRAN_MODE" Type="varchar" MaxLength="50" />
+    <Property Name="TRAN_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="RIGHT_URL" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ADM_PASS_HISTORY">
+    <Key>
+      <PropertyRef Name="USER_CODE" />
+      <PropertyRef Name="NO" />
+    </Key>
+    <Property Name="USER_CODE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="NO" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="CODE" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ADM_SETUP">
+    <Key>
+      <PropertyRef Name="COMP_CODE" />
+    </Key>
+    <Property Name="COMP_CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="varchar(max)" />
+    <Property Name="FORMERLY" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="FORMERLY_NAME" Type="varchar(max)" />
+    <Property Name="ABRIVIATION" Type="varchar" MaxLength="5" />
+    <Property Name="ADDRESS" Type="varchar(max)" />
+    <Property Name="ADDRESS_REG" Type="varchar(max)" />
+    <Property Name="PHONE" Type="varchar" MaxLength="100" />
+    <Property Name="UAN" Type="varchar" MaxLength="100" />
+    <Property Name="FAX" Type="varchar" MaxLength="100" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="100" />
+    <Property Name="NTN" Type="varchar" MaxLength="100" />
+    <Property Name="LESSOR_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="INCOR_NO" Type="varchar" MaxLength="100" />
+    <Property Name="INCOR_DATE" Type="datetime" />
+    <Property Name="SERVER_LOCATION" Type="varchar" MaxLength="100" />
+    <Property Name="SLAB_DAYS" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="FINYEAR" Type="varchar" MaxLength="10" />
+    <Property Name="FINYEAR_FROM" Type="datetime" />
+    <Property Name="FINYEAR_TO" Type="datetime" />
+    <Property Name="GL_YEAR" Type="varchar(max)" />
+    <Property Name="CURRENT_YEAR" Type="varchar(max)" />
+    <Property Name="GLYEAR_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="UN_URL" Type="varchar(max)" />
+    <Property Name="NACTA_URL" Type="varchar(max)" />
+    <Property Name="ATL_URL" Type="varchar(max)" />
+    <Property Name="ATL_PATH" Type="varchar(max)" />
+    <Property Name="SMS_URL" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_USER_BRANCH">
+    <Key>
+      <PropertyRef Name="MID" />
+      <PropertyRef Name="USER_CODE" />
+      <PropertyRef Name="BRANCH_CODE" />
+    </Key>
+    <Property Name="MID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="USER_CODE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="BRANCH_CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="BRANCH_NAME" Type="varchar(max)" />
+    <Property Name="BRANCH_FLAG" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_USER_LEVEL">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_USER_LEVEL_RIGHTS">
+    <Key>
+      <PropertyRef Name="MID" />
+      <PropertyRef Name="LEVEL_CODE" />
+      <PropertyRef Name="RIGHT_CODE" />
+    </Key>
+    <Property Name="MID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="LEVEL_CODE" Type="decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_DESC" Type="varchar(max)" />
+    <Property Name="TRAN_MODE" Type="varchar" MaxLength="50" />
+    <Property Name="TRAN_CODE" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="RIGHT_FLAG" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="ADM_USER_MDL">
+    <Key>
+      <PropertyRef Name="USER_CODE" />
+      <PropertyRef Name="MID" />
+    </Key>
+    <Property Name="USER_CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="MID_FLAG" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="LEVEL_CODE" Type="varchar" MaxLength="4" />
+    <Property Name="LOGIN" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="LOGIN_ON" Type="datetime" />
+    <Property Name="LOGOUT_ON" Type="datetime" />
+    <Property Name="LAST_LOGIN" Type="datetime" />
+    <Property Name="ATTEMPT" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="LOCK" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="LOCK_DATE" Type="datetime" />
+    <Property Name="DORMANT" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="DORMANT_DATE" Type="datetime" />
+    <Property Name="MIN_RATE" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="MAX_RATE" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="MIN_LIMIT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MAX_LIMIT" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="ADM_USER_RIGHT">
+    <Key>
+      <PropertyRef Name="USER_CODE" />
+      <PropertyRef Name="MID" />
+      <PropertyRef Name="RIGHT_CODE" />
+    </Key>
+    <Property Name="USER_CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="LEVEL_CODE" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="RIGHT_CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_DESC_CODE" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="RIGHT_DESC" Type="varchar(max)" />
+    <Property Name="TRAN_MODE" Type="varchar" MaxLength="20" />
+    <Property Name="TRAN_CODE" Type="decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_FLAG" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="RIGHT_URL" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ADM_USER_RIGHTS">
+    <Key>
+      <PropertyRef Name="USER_CODE" />
+      <PropertyRef Name="MID" />
+      <PropertyRef Name="RIGHT_CODE" />
+    </Key>
+    <Property Name="USER_CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="MID" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="LEVEL_CODE" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="RIGHT_CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_DESC_CODE" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="RIGHT_DESC" Type="varchar(max)" />
+    <Property Name="TRAN_MODE" Type="varchar" MaxLength="20" />
+    <Property Name="TRAN_CODE" Type="decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="RIGHT_FLAG" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="RIGHT_URL" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ADM_USERS">
+    <Key>
+      <PropertyRef Name="USER_CODE" />
+    </Key>
+    <Property Name="CREATION" Type="datetime" />
+    <Property Name="LAST_MODIFY" Type="datetime" />
+    <Property Name="USER_CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="EMP_CODE" Type="varchar" MaxLength="7" />
+    <Property Name="CODE" Type="varbinary" MaxLength="50" />
+    <Property Name="PASS_EXPIRY_DAYS" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="PASS_CHANGE_DATE" Type="datetime" />
+    <Property Name="DORMANT_DAYS" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="CDD_CLIENT">
+    <Key>
+      <PropertyRef Name="PARTY_CODE" />
+      <PropertyRef Name="DD_CODE" />
+    </Key>
+    <Property Name="TRAN_DATE" Type="datetime" />
+    <Property Name="TYPE" Type="varchar" MaxLength="3" />
+    <Property Name="EVENT_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="PARTY_CODE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DD_CODE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CLIENT_TYPE" Type="varchar" MaxLength="1" />
+    <Property Name="TAX_RES_TYPE" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="TAX_STATUS" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="TAX_EXPIRY" Type="datetime" />
+    <Property Name="TAX_EXEMPT_REASON" Type="varchar(max)" />
+    <Property Name="DOC_TYPE" Type="varchar" MaxLength="10" />
+    <Property Name="CNIC" Type="decimal" Precision="13" Scale="0" />
+    <Property Name="CNIC_EXPIRY" Type="datetime" />
+    <Property Name="PASS" Type="varchar" MaxLength="50" />
+    <Property Name="PASS_EXPIRY" Type="datetime" />
+    <Property Name="CNIC_OTH" Type="varchar" MaxLength="50" />
+    <Property Name="CNIC_OTH_EXPIRY" Type="datetime" />
+    <Property Name="NTN" Type="varchar" MaxLength="20" />
+    <Property Name="INCORP_COUNTRY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="INCORP_NO" Type="varchar" MaxLength="50" />
+    <Property Name="INCORP_DATE" Type="datetime" />
+    <Property Name="IND" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="CAT" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="TITLE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="NAME" Type="varchar(max)" />
+    <Property Name="ADD" Type="varchar(max)" />
+    <Property Name="ADD_PERM" Type="varchar(max)" />
+    <Property Name="ADD_CITY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="PHONE" Type="varchar" MaxLength="60" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="100" />
+    <Property Name="FAX" Type="varchar" MaxLength="50" />
+    <Property Name="GROUP_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="CONTACT_PERSON" Type="varchar" MaxLength="100" />
+    <Property Name="CONTACT_PERSON_DESIG" Type="varchar" MaxLength="100" />
+    <Property Name="RM_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="ZAKAT_EXEMPT" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="ZAKAT_EXEMPT_CERT" Type="varchar" MaxLength="50" />
+    <Property Name="ZAKAT_RATE" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="DD_TYPE" Type="varchar" MaxLength="5" />
+    <Property Name="PEP_STATUS" Type="varchar" MaxLength="20" />
+    <Property Name="RISK_LEVEL" Type="varchar" MaxLength="10" />
+    <Property Name="BUSINESS" Type="varchar(max)" />
+    <Property Name="KYC_STATUS" Type="varchar" MaxLength="10" />
+    <Property Name="FATCA_STATUS" Type="varchar" MaxLength="10" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="CDD_CLIENT_BANK">
+    <Key>
+      <PropertyRef Name="PARTY_CODE" />
+      <PropertyRef Name="DD_CODE" />
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PARTY_CODE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DD_CODE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="BANK_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="BANK_BR_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="AC_TITLE" Type="varchar(max)" />
+    <Property Name="AC_NO" Type="varchar" MaxLength="50" />
+    <Property Name="JOINT" Type="varchar" MaxLength="1" />
+    <Property Name="NAME" Type="varchar(max)" />
+    <Property Name="RELATION" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="PHONE" Type="varchar" MaxLength="60" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="CDD_CLIENT_CON">
+    <Key>
+      <PropertyRef Name="PARTY_CODE" />
+      <PropertyRef Name="DD_CODE" />
+    </Key>
+    <Property Name="PARTY_CODE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="RES_STATUS" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="FATHER" Type="varchar" MaxLength="100" />
+    <Property Name="MOTHER" Type="varchar" MaxLength="100" />
+    <Property Name="GENDER" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="MARITAL" Type="varchar" MaxLength="1" />
+    <Property Name="SPOUSE" Type="varchar" MaxLength="100" />
+    <Property Name="MOBILE" Type="varchar" MaxLength="50" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="BIRTH_PLACE" Type="varchar" MaxLength="50" />
+    <Property Name="EDUCAT" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="DD_CODE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="RES_TYPE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="OCCUP" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="GUAR_NAME" Type="varchar(max)" />
+    <Property Name="GUAR_REL" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="NATIONAL" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="DEPEND" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="BIRTH_CITY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="BIRTH_COUNTRY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="COS" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="COS_ADD" Type="varchar(max)" />
+    <Property Name="REL_PARTY" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="REL_PARTY_CODE" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="REL_PARTY_NAME" Type="varchar(max)" />
+    <Property Name="REL_PARTY_REL" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="NTK_NAME" Type="varchar(max)" />
+    <Property Name="NTK_REL" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="NTK_ADD" Type="varchar(max)" />
+    <Property Name="NTK_PHONE" Type="varchar" MaxLength="60" />
+    <Property Name="NTK_CNIC" Type="decimal" Precision="13" Scale="0" />
+    <Property Name="NTK_CNIC_EXPIRY" Type="datetime" />
+    <Property Name="BEN" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="BEN_PARTY_CODE" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="BEN_NAME" Type="varchar(max)" />
+    <Property Name="BEN_ADDRESS" Type="varchar(max)" />
+    <Property Name="BEN_CNIC" Type="decimal" Precision="15" Scale="0" />
+    <Property Name="BEN_OCCUP" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="BEN_REL" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="BUSS_NAME" Type="varchar(max)" />
+    <Property Name="BUSS_TYPE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="BUSS_ADD" Type="varchar(max)" />
+    <Property Name="BUSS_PHONE" Type="varchar" MaxLength="60" />
+    <Property Name="BUSS_NOY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="BUSS_NOE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="BUSS_NTN" Type="varchar" MaxLength="20" />
+    <Property Name="BUSS_APPROX_INCOME" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="EMPL_NAME" Type="varchar(max)" />
+    <Property Name="EMPL_TYPE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="EMPL_ADD" Type="varchar(max)" />
+    <Property Name="EMPL_PHONE" Type="varchar" MaxLength="50" />
+    <Property Name="EMPL_DESIG" Type="varchar" MaxLength="50" />
+    <Property Name="EMPL_DOJ" Type="datetime" />
+    <Property Name="EMPL_SERVICE_PERIOD" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="EMPL_STATUS" Type="varchar" MaxLength="50" />
+    <Property Name="EMPL_APPROX_SAL" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="CDD_CLIENT_DIR">
+    <Key>
+      <PropertyRef Name="PARTY_CODE" />
+      <PropertyRef Name="DD_CODE" />
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PARTY_CODE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DD_CODE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CODE" Type="decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="varchar(max)" />
+    <Property Name="ADD" Type="varchar(max)" />
+    <Property Name="ADD_PERM" Type="varchar(max)" />
+    <Property Name="FATHER" Type="varchar" MaxLength="80" />
+    <Property Name="MOTHER" Type="varchar" MaxLength="80" />
+    <Property Name="GENDER" Type="varchar" MaxLength="1" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="MARITAL" Type="varchar" MaxLength="1" />
+    <Property Name="SPOUSE" Type="varchar" MaxLength="50" />
+    <Property Name="CNIC" Type="decimal" Precision="13" Scale="0" />
+    <Property Name="CNIC_EXPIRY" Type="datetime" />
+    <Property Name="PASST_NO" Type="varchar" MaxLength="50" />
+    <Property Name="PASS_EXPIRY" Type="datetime" />
+    <Property Name="SHARES" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="DOJ" Type="datetime" />
+    <Property Name="DOL" Type="datetime" />
+    <Property Name="TYPE" Type="varchar" MaxLength="1" />
+    <Property Name="TNOM" Type="varchar" MaxLength="3" />
+    <Property Name="NNOM" Type="varchar" MaxLength="70" />
+    <Property Name="PROFESSION" Type="varchar" MaxLength="50" />
+    <Property Name="BIRTH_COUNTRY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="BIRTH_CITY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="BIRTH_PLACE" Type="varchar" MaxLength="50" />
+    <Property Name="NATIONALITY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="COS" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="COS_ADDS" Type="varchar(max)" />
+    <Property Name="PEP_STATUS" Type="varchar" MaxLength="50" />
+    <Property Name="REL_OTHR_ORG" Type="varchar" MaxLength="100" />
+    <Property Name="AUTH_SIGN" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="CDD_CLIENT_GUA">
+    <Key>
+      <PropertyRef Name="PARTY_CODE" />
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PARTY_CODE" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="varchar(max)" />
+    <Property Name="ADD" Type="varchar(max)" />
+    <Property Name="ADD_PREM" Type="varchar(max)" />
+    <Property Name="CNIC" Type="numeric" Precision="15" Scale="0" />
+    <Property Name="CNIC_EXPIRY" Type="date" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="FATHER" Type="varchar(max)" />
+    <Property Name="MOTHER" Type="varchar(max)" />
+    <Property Name="SPOUSE" Type="varchar(max)" />
+    <Property Name="COS" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="COS_ADD" Type="varchar(max)" />
+    <Property Name="CITY_BIRTH" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="COUNTRY_BIRTH" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="COUNTRY_NATIONAL" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="LIAB_G" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="LIAB_B" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_SIGN" Type="numeric" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="CDD_CLIENT_NATIONAL">
+    <Key>
+      <PropertyRef Name="PARTY_CODE" />
+      <PropertyRef Name="DD_CODE" />
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="PARTY_CODE" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DD_CODE" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="COUNTRY_CODE" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="ORIGIN" Type="numeric" Precision="1" Scale="0" />
+    <Property Name="CNIC" Type="varchar" MaxLength="50" />
+    <Property Name="CNIC_EXPIRY" Type="datetime" />
+    <Property Name="NTN" Type="varchar" MaxLength="50" />
+    <Property Name="TAX_STATUS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="TAX_FILE_DATE" Type="datetime" />
+    <Property Name="COMMENTS" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="LMS_CLIENT_LIMIT">
+    <Key>
+      <PropertyRef Name="TRAN_CODE" />
+    </Key>
+    <Property Name="TRAN_CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TRAN_DATE" Type="date" />
+    <Property Name="PARTY_CODE" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="LEASE_CAT" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="LIMIT_TYPE" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="EFFECT_DATE" Type="date" />
+    <Property Name="LIMIT" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_AMORT_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_ASET_CAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_ASET_MAKE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_ASET_MANUFACT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="ADD" Type="varchar(max)" />
+    <Property Name="PHONE" Type="varchar(max)" />
+    <Property Name="EMAIL" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_ASET_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BCA_APPLI_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BCA_FACI_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BCA_RENEWAL">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BCA_TYPES">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BRWR_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BUS_CAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_BUS_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_BRWR_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_BUS_CAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_BUS_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_IND">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_PROD">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_PROV">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="COUNTRY_CODE" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="ABRV" Type="varchar" MaxLength="50" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_SECT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_STATUS">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CIB_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_COLAT_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="COLAT_DESC" Type="varchar(max)" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CORP_STAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="COR_TYPE" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_CORP_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_EDU">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_EMPL_STATUS">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_lMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_EMPL_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_FACILITY_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_GROUP">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_IND">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_IND_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_ISIC">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ISIC_CODE" Type="varchar" MaxLength="10" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LEASE_NAT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LEASE_NAT_SUB">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="LEASE_NAT" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LEASE_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LEASE_TYPE_SUB">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="LEASE_TYPE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LEND_INST">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LESSEE_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="TYPE" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_LITI_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_NFBI_SECT">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_NICODE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NICODE" Type="varchar" MaxLength="10" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_NP_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_PAY_MODE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_PERIOD">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_PROV">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_RENT_MODE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_RES_TYPE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TYPE" Type="varchar" MaxLength="1" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE_LMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_IMS" Type="decimal" Precision="1" Scale="0" />
+    <Property Name="INACTIVE_MFL" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_SECTOR">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_SUP">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="varchar(max)" />
+    <Property Name="ADD" Type="varchar(max)" />
+    <Property Name="PHONE" Type="varchar(max)" />
+    <Property Name="EMAIL" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_TITLE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="DESC" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="decimal" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="LMS_DEF_VALUATOR">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="varchar(max)" />
+    <Property Name="ADD" Type="varchar(max)" />
+    <Property Name="PHONE" Type="varchar(max)" />
+    <Property Name="EMAIL" Type="varchar(max)" />
+    <Property Name="AUTH_STATUS" Type="varchar" MaxLength="1" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AUTH_REMARKS" Type="varchar(max)" />
+    <Property Name="INACTIVE" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityContainer Name="BMSModelStoreContainer">
+    <EntitySet Name="ADM_AUTH_STATUS" EntityType="Self.ADM_AUTH_STATUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DAILY_KIBOR" EntityType="Self.ADM_DAILY_KIBOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_BANK" EntityType="Self.ADM_DEF_BANK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_BANK_AC_TYPE" EntityType="Self.ADM_DEF_BANK_AC_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_BANK_BR" EntityType="Self.ADM_DEF_BANK_BR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_BRANCH" EntityType="Self.ADM_DEF_BRANCH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_BUS_TYPE" EntityType="Self.ADM_DEF_BUS_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_CHQ_TYPE" EntityType="Self.ADM_DEF_CHQ_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_CITY" EntityType="Self.ADM_DEF_CITY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_CLIENT_TYPE" EntityType="Self.ADM_DEF_CLIENT_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_COUNTRY" EntityType="Self.ADM_DEF_COUNTRY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_DD_TYPE" EntityType="Self.ADM_DEF_DD_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_DOC_TYPE" EntityType="Self.ADM_DEF_DOC_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_EDU" EntityType="Self.ADM_DEF_EDU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_EMAIL_SETTINGS" EntityType="Self.ADM_DEF_EMAIL_SETTINGS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_FINYEAR" EntityType="Self.ADM_DEF_FINYEAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_FLOAT" EntityType="Self.ADM_DEF_FLOAT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_FLOAT_FREQ" EntityType="Self.ADM_DEF_FLOAT_FREQ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_GENDER" EntityType="Self.ADM_DEF_GENDER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_GROUP" EntityType="Self.ADM_DEF_GROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_INSU_CO" EntityType="Self.ADM_DEF_INSU_CO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_KIBOR_FREQ" EntityType="Self.ADM_DEF_KIBOR_FREQ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_KIBOR_MONT" EntityType="Self.ADM_DEF_KIBOR_MONT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_LOAN_TERM" EntityType="Self.ADM_DEF_LOAN_TERM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_MARITAL" EntityType="Self.ADM_DEF_MARITAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_NATIONAL" EntityType="Self.ADM_DEF_NATIONAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_OCCUP" EntityType="Self.ADM_DEF_OCCUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_PEP" EntityType="Self.ADM_DEF_PEP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_PROV" EntityType="Self.ADM_DEF_PROV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_REL" EntityType="Self.ADM_DEF_REL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_REL_PARTY" EntityType="Self.ADM_DEF_REL_PARTY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_RES_TYPE" EntityType="Self.ADM_DEF_RES_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_RM" EntityType="Self.ADM_DEF_RM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_STOCK_TYPE" EntityType="Self.ADM_DEF_STOCK_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_TAX_RES_TYPE" EntityType="Self.ADM_DEF_TAX_RES_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_TAX_STATUS" EntityType="Self.ADM_DEF_TAX_STATUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_DEF_TITLE" EntityType="Self.ADM_DEF_TITLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_MDL" EntityType="Self.ADM_MDL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_MDL_RIGHT" EntityType="Self.ADM_MDL_RIGHT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_PASS_HISTORY" EntityType="Self.ADM_PASS_HISTORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_SETUP" EntityType="Self.ADM_SETUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_USER_BRANCH" EntityType="Self.ADM_USER_BRANCH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_USER_LEVEL" EntityType="Self.ADM_USER_LEVEL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_USER_LEVEL_RIGHTS" EntityType="Self.ADM_USER_LEVEL_RIGHTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_USER_MDL" EntityType="Self.ADM_USER_MDL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_USER_RIGHT" EntityType="Self.ADM_USER_RIGHT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_USER_RIGHTS" EntityType="Self.ADM_USER_RIGHTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADM_USERS" EntityType="Self.ADM_USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CDD_CLIENT" EntityType="Self.CDD_CLIENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CDD_CLIENT_BANK" EntityType="Self.CDD_CLIENT_BANK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CDD_CLIENT_CON" EntityType="Self.CDD_CLIENT_CON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CDD_CLIENT_DIR" EntityType="Self.CDD_CLIENT_DIR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CDD_CLIENT_GUA" EntityType="Self.CDD_CLIENT_GUA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CDD_CLIENT_NATIONAL" EntityType="Self.CDD_CLIENT_NATIONAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_CLIENT_LIMIT" EntityType="Self.LMS_CLIENT_LIMIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_AMORT_TYPE" EntityType="Self.LMS_DEF_AMORT_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_ASET_CAT" EntityType="Self.LMS_DEF_ASET_CAT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_ASET_MAKE" EntityType="Self.LMS_DEF_ASET_MAKE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_ASET_MANUFACT" EntityType="Self.LMS_DEF_ASET_MANUFACT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_ASET_TYPE" EntityType="Self.LMS_DEF_ASET_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_BCA_APPLI_TYPE" EntityType="Self.LMS_DEF_BCA_APPLI_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_BCA_FACI_TYPE" EntityType="Self.LMS_DEF_BCA_FACI_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_BCA_RENEWAL" EntityType="Self.LMS_DEF_BCA_RENEWAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_BCA_TYPES" EntityType="Self.LMS_DEF_BCA_TYPES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_BRWR_TYPE" EntityType="Self.LMS_DEF_BRWR_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_BUS_CAT" EntityType="Self.LMS_DEF_BUS_CAT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_BUS_TYPE" EntityType="Self.LMS_DEF_BUS_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_CAT" EntityType="Self.LMS_DEF_CAT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_CIB_BRWR_TYPE" EntityType="Self.LMS_DEF_CIB_BRWR_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_CIB_BUS_CAT" EntityType="Self.LMS_DEF_CIB_BUS_CAT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_CIB_BUS_TYPE" EntityType="Self.LMS_DEF_CIB_BUS_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_CIB_IND" EntityType="Self.LMS_DEF_CIB_IND" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_CIB_PROD" EntityType="Self.LMS_DEF_CIB_PROD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_CIB_PROV" EntityType="Self.LMS_DEF_CIB_PROV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_CIB_SECT" EntityType="Self.LMS_DEF_CIB_SECT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_CIB_STATUS" EntityType="Self.LMS_DEF_CIB_STATUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_CIB_TYPE" EntityType="Self.LMS_DEF_CIB_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_COLAT_TYPE" EntityType="Self.LMS_DEF_COLAT_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_CORP_STAT" EntityType="Self.LMS_DEF_CORP_STAT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_CORP_TYPE" EntityType="Self.LMS_DEF_CORP_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_EDU" EntityType="Self.LMS_DEF_EDU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_EMPL_STATUS" EntityType="Self.LMS_DEF_EMPL_STATUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_EMPL_TYPE" EntityType="Self.LMS_DEF_EMPL_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_FACILITY_TYPE" EntityType="Self.LMS_DEF_FACILITY_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_GROUP" EntityType="Self.LMS_DEF_GROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_IND" EntityType="Self.LMS_DEF_IND" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_IND_TYPE" EntityType="Self.LMS_DEF_IND_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_ISIC" EntityType="Self.LMS_DEF_ISIC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_LEASE_NAT" EntityType="Self.LMS_DEF_LEASE_NAT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_LEASE_NAT_SUB" EntityType="Self.LMS_DEF_LEASE_NAT_SUB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_LEASE_TYPE" EntityType="Self.LMS_DEF_LEASE_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_LEASE_TYPE_SUB" EntityType="Self.LMS_DEF_LEASE_TYPE_SUB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_LEND_INST" EntityType="Self.LMS_DEF_LEND_INST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_LESSEE_TYPE" EntityType="Self.LMS_DEF_LESSEE_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_LITI_TYPE" EntityType="Self.LMS_DEF_LITI_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_NFBI_SECT" EntityType="Self.LMS_DEF_NFBI_SECT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_NICODE" EntityType="Self.LMS_DEF_NICODE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_NP_TYPE" EntityType="Self.LMS_DEF_NP_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_PAY_MODE" EntityType="Self.LMS_DEF_PAY_MODE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_PERIOD" EntityType="Self.LMS_DEF_PERIOD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_PROV" EntityType="Self.LMS_DEF_PROV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_RENT_MODE" EntityType="Self.LMS_DEF_RENT_MODE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_RES_TYPE" EntityType="Self.LMS_DEF_RES_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_SECTOR" EntityType="Self.LMS_DEF_SECTOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_SUP" EntityType="Self.LMS_DEF_SUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_TITLE" EntityType="Self.LMS_DEF_TITLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LMS_DEF_VALUATOR" EntityType="Self.LMS_DEF_VALUATOR" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

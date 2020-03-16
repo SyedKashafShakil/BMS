@@ -1,0 +1,264 @@
+﻿@{
+    ViewBag.Title = "Index";
+
+
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BANK Account Details</title>
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/BankAcDetails.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        /*----- Tabs -----*/
+        .tabs {
+            width: 100%;
+            display: inline-block;
+        }
+
+        /*----- Tab Links -----*/
+        /* Clearfix */
+        .tab-links:after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+
+        .tab-links li {
+            margin: 0px 5px;
+            float: left;
+            list-style: none;
+        }
+
+        .tab-links a {
+            padding: 9px 15px;
+            display: inline-block;
+            border-radius: 3px 3px 0px 0px;
+            background: #7FB5DA;
+            font-size: 16px;
+            font-weight: 600;
+            color: #4c4c4c;
+            transition: all linear 0.15s;
+        }
+
+            .tab-links a:hover {
+                background: #a7cce5;
+                text-decoration: none;
+            }
+
+        li.active a, li.active a:hover {
+            background: #fff;
+            color: #4c4c4c;
+        }
+
+        /*----- Content of Tabs -----*/
+        .tab-content {
+            padding: 15px;
+            border-radius: 3px;
+            box-shadow: -1px 1px 1px rgba(0,0,0,0.15);
+            background: #fff;
+        }
+
+        .tab {
+            display: none;
+        }
+
+            .tab.active {
+                display: block;
+            }
+
+        p{
+            color:red;
+            font-style:oblique;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h3>BANK ACCOUNT DEFINATION</h3>
+
+
+    <div class="form-group row">
+        <div class="col-xs-2">
+            <label for="CODE_BANK_AC_DEF">Code</label>
+            <input type="number" class="form-control" id="CODE_BANK_AC_DEF" placeholder="Code" />
+
+
+        </div>
+        <div style="padding-top:25px">
+            <button id="CODEBTN" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="return loadData();"><i class="fa fa-eye"></i></button>
+        </div>
+    </div>
+    <div class="form-group row">
+
+        <div class="col-xs-3">
+            <label for="DESC_BANK_AC_DEF">DESC</label>
+            <input type="text" class="form-control" id="DESC_BANK_AC_DEF" placeholder="DESC" />
+        </div>
+        <div class="col-xs-3">
+            <label for="TYPE_BANK_AC_DEF">TYPE</label>
+            <input type="text" class="form-control" id="TYPE_BANK_AC_DEF" placeholder="TYPE" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-2">
+            <label for="INACTIVE_LMS_BANK_AC_DEF">INACTIVE LMS</label>
+            <input type="number" class="form-control" id="INACTIVE_LMS_BANK_AC_DEF" placeholder="INACTIVE LMS" />
+        </div>
+        <div class="col-xs-2">
+            <label for="INACTIVE_IMS_BANK_AC_DEF">INACTIVE IMS</label>
+            <input type="number" class="form-control" id="INACTIVE_IMS_BANK_AC_DEF" placeholder="INACTIVE IMS" />
+        </div>
+        <div class="col-xs-2">
+            <label for="INACTIVE_MFL_BANK_AC_DEF">INACTIVE MFL</label>
+            <input type="number" class="form-control" id="INACTIVE_MFL_BANK_AC_DEF" placeholder="INACTIVE MFL" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-2">
+            <label for="AUTH_STATUS_BANK_AC_DEF">Auth Status</label>
+            <input type="text" class="form-control" id="AUTH_STATUS_BANK_AC_DEF" placeholder="Auth Status" />
+        </div>
+        <div class="col-xs-4">
+            <label for="AUTH_BY_BANK_AC_DEF">Auth By</label>
+            <input type="text" class="form-control" id="AUTH_BY_BANK_AC_DEF" placeholder="Auth By" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-xs-2">
+            <label for="AUTH_DATE_BANK_AC_DEF">Auth Date</label>
+            <input type="date" class="form-control" id="AUTH_DATE_BANK_AC_DEF" placeholder="AuthDate" />
+        </div>
+        <div class="col-xs-4">
+            <label for="AUTH_REMARKS_BANK_AC_DEF">Auth Remarks</label>
+            <input type="text" class="form-control" id="AUTH_REMARKS_BANK_AC_DEF" placeholder="AuthRemark" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-lg-4">
+            <button type="button" class="btn btn-primary" id="btnCreate" onclick="return Create();">Create</button>
+            <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Add</button>
+            <button type="button" class="btn btn-primary" id="btnUpdate" onclick="Update();">Update</button>
+            <button type="button" class="btn btn-primary" id="btnEdit" onclick="Edit();">Edit</button>
+            <button type="button" class="btn btn-primary" id="btnDelete" onclick="Delete();">Delete</button>
+        </div>
+        <div class="col-lg-4">
+            <button type="button" class="btn btn-primary" id="btnBackward" onclick="Backward();"><</button>
+            <button type="button" class="btn btn-primary" id="btnFirst" onclick="First();"><<</button>
+            <button type="button" class="btn btn-primary" id="btnLast" onclick="Last();">>></button>
+            <button type="button" class="btn btn-primary" id="btnForward" onclick="Forward();">></button>
+        </div>
+    </div>
+    @*<div id="main" class="active table-responsive">
+            <h4>BANK ACCOUNT DEFINATION</h4>
+            <Table ID="defbank" class="table table-hover">
+                <tr>
+                    <td><label for="CODE_BANK_AC_DEF">Code</label></td>
+                    <td><input type="number" class="form-control" id="CODE_BANK_AC_DEF" placeholder="Code" /><button id="CODEBTN" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="return loadData();">O</button></td>
+                    <td></td>
+                    <td><label for="DESC_BANK_AC_DEF">DESC</label></td>
+                    <td><input type="text" class="form-control" id="DESC_BANK_AC_DEF" placeholder="DESC" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="TYPE_BANK_AC_DEF">TYPE</label></td>
+                    <td><input type="text" class="form-control" id="TYPE_BANK_AC_DEF" placeholder="TYPE" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="INACTIVE_LMS_BANK_AC_DEF">INACTIVE LMS</label></td>
+                    <td><input type="number" class="form-control" id="INACTIVE_LMS_BANK_AC_DEF" placeholder="INACTIVE LMS" /></td>
+                    <td><label for="INACTIVE_IMS_BANK_AC_DEF">INACTIVE IMS</label></td>
+                    <td><input type="number" class="form-control" id="INACTIVE_IMS_BANK_AC_DEF" placeholder="INACTIVE IMS" /></td>
+                    <td><label for="INACTIVE_MFL_BANK_AC_DEF">INACTIVE MFL</label></td>
+                    <td><input type="number" class="form-control" id="INACTIVE_MFL_BANK_AC_DEF" placeholder="INACTIVE MFL" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="AUTH_STATUS_BANK_AC_DEF">Auth Status</label></td>
+                    <td><input type="text" class="form-control" id="AUTH_STATUS_BANK_AC_DEF" placeholder="Auth Status" /></td>
+                    <td><label for="AUTH_BY_BANK_AC_DEF">Auth By</label></td>
+                    <td><input type="text" class="form-control" id="AUTH_BY_BANK_AC_DEF" placeholder="Auth By" /></td>
+                </tr>
+                <tr>
+                    <td><label for="AUTH_DATE_BANK_AC_DEF">Auth Date</label></td>
+                    <td><input type="date" class="form-control" id="AUTH_DATE_BANK_AC_DEF" placeholder="AuthDate" /></td>
+                    <td><label for="AUTH_REMARKS_BANK_AC_DEF">Auth Remarks</label></td>
+                    <td><input type="text" class="form-control" id="AUTH_REMARKS_BANK_AC_DEF" placeholder="AuthRemark" /></td>
+                </tr>
+
+
+            </Table>
+            <button type="button" class="btn btn-primary" id="btnCreate" onclick="return Create();">Create</button>
+            <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Add</button>
+            <button type="button" class="btn btn-primary" id="btnUpdate" onclick="Update();">Update</button>
+            <button type="button" class="btn btn-primary" id="btnEdit" onclick="Edit();">Edit</button>
+            <button type="button" class="btn btn-primary" id="btnDelete" onclick="Delete();">Delete</button>
+
+            <button type="button" class="btn btn-primary" id="btnBackward" onclick="Backward();"><</button>
+            <button type="button" class="btn btn-primary" id="btnFirst" onclick="First();"><<</button>
+            <button type="button" class="btn btn-primary" id="btnLast" onclick="Last();">>></button>
+            <button type="button" class="btn btn-primary" id="btnForward" onclick="Forward();">></button>
+            <p id="errormsg" style="color:red"></p>
+        </div>*@
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">View</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="filter">
+                        <div class="form-group row">
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="Searchbar" placeholder="Search" />
+
+                            </div>
+                            <div class="col-lg-1">
+                                <button id="SearchBTN" type="button" class="btn btn-info fa fa-search" onclick="findData()"></button>
+                            </div>
+                            <div class="col-lg-1">
+                                <input type="radio" id="findDESC" name="option" value="1" />DESC
+                            </div>
+                            <div class="col-lg-1">
+                                <input type="radio" id="findCODE" name="option" value="0" />CODE
+                            </div>
+                        </div>
+                    </form>
+                    <table class="table table-responsive table-hover table-striped">
+                        <tr>
+
+                            <th>
+                                CODE
+                            </th>
+                            <th>
+                                DESC
+                            </th>
+
+                            <th></th>
+                        </tr>
+
+                        <tbody class="tbody" id="tbodyMaster"></tbody>
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+

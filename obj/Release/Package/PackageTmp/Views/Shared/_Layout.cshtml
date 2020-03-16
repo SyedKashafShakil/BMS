@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+            margin-top: 0;
+        }
+    </style>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery('.tabs .tab-links a').on('click', function (e) {
+                var currentAttrValue = jQuery(this).attr('href');
+
+                // Show/Hide Tabs
+                jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+
+                // Change/remove current tab to active
+                jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+
+                e.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Client Details", "Index", "Client")</li>
+                    
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Administrator Definitions<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Bank Account", "Index", "DefBankAc")</li>
+                            <li>@Html.ActionLink("Bank Branch", "Index", "DefBankBr")</li>
+                            <li>@Html.ActionLink("Client Type", "Index", "DefClientType")</li>
+                            <li>@Html.ActionLink("Bank", "Index", "DefBank")</li>
+                            <li>@Html.ActionLink("Branch", "Index", "DefBranch")</li>
+                            <li>@Html.ActionLink("Cheque Type", "Index", "DefChqType")</li>
+                            <li>@Html.ActionLink("Country", "Index", "DefCountry")</li>
+                            <li>@Html.ActionLink("DD Type", "Index", "DefDDType")</li>
+                            <li>@Html.ActionLink("Doc Type", "Index", "DefDocType")</li>
+                            <li>@Html.ActionLink("Education", "Index", "DefEdu")</li>
+                            <li>@Html.ActionLink("Email", "Index", "DefEmail")</li>
+                            <li>@Html.ActionLink("Employee Status", "Index", "DefEmpStatus")</li>
+                            <li>@Html.ActionLink("Employee Type", "Index", "DefEmpType")</li>
+                            <li>@Html.ActionLink("Float", "Index", "DefFloat")</li>
+                            <li>@Html.ActionLink("Gender", "Index", "DefGender")</li>
+                            <li>@Html.ActionLink("Group", "Index", "DefGroup")</li>
+                            <li>@Html.ActionLink("KIBOR Frequency", "Index", "DefKIBORFreq")</li>
+                            <li>@Html.ActionLink("KIBOR Month", "Index", "DefKIBORMonth")</li>
+                            <li>@Html.ActionLink("Marital", "Index", "DefMarital")</li>
+                            <li>@Html.ActionLink("National", "Index", "DefNational")</li>
+                            <li>@Html.ActionLink("Occupation", "Index", "DefOccup")</li>
+                            <li>@Html.ActionLink("Pep", "Index", "DefPep")</li>
+                            <li>@Html.ActionLink("Province", "Index", "DefProv")</li>
+                            <li>@Html.ActionLink("Rel", "Index", "DefRel")</li>
+                            <li>@Html.ActionLink("Rel Party", "Index", "DefRelParty")</li>
+                            <li>@Html.ActionLink("Res Type", "Index", "DefResType")</li>
+                            <li>@Html.ActionLink("Relation Manager", "Index", "DefRM")</li>
+                            <li>@Html.ActionLink("Stock Type", "Index", "DefStockType")</li>
+                            <li>@Html.ActionLink("Tax Res Type", "Index", "DefTaxResType")</li>
+                            <li>@Html.ActionLink("Tax Status", "Index", "DefTaxStatus")</li>
+                            <li>@Html.ActionLink("Title", "Index", "DefTitle")</li>
+                            <li>@Html.ActionLink("Float Frequency", "Index", "DefFloatFreq")</li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
